@@ -1,0 +1,18 @@
+<h1>Config Blog</h1>
+<hr>
+
+<form method="POST" class="form-horizontal">
+  <input type='hidden' name='method' value='\MYNT\SYSTEM\CONFIG::setDataUpload' />
+  <input type="hidden" name="p" value="<<REQUEST:p>>" />
+  <input type="hidden" name="prefix" value="blog" />
+  <div class='container'>
+    <div class="row">
+<<METHOD:\MYNT\SYSTEM\CONFIG::getInputView("blog")>>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8 text-right">
+      <button type="submit" class="btn btn-default">Update</button>
+    </div>
+  </div>
+</form>

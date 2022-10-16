@@ -1,0 +1,21 @@
+
+table.userLists tr:hover{
+  background-color:#EFF;
+  cursor:pointer;
+}
+
+
+.lists table thead{
+  border-bottom:1px solid #ccc;
+}
+.lists table tbody tr{
+  height:50px;
+}
+.lists table th{
+  text-align:left;
+  min-width:100px;
+}
+.lists table th.num{
+  text-align:center;
+  min-width:40px;
+}

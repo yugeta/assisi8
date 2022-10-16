@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="page/system/contents/menu/main.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/menu/main.js?{{php:\mynt::currentTime()}}"></script>
+
+
+<div class="contents-area">
+<h1>Menu Setting</h1>
+<h2>{{globals:config[page]}}</h2>
+
+<div class="type">
+<select>
+{{php:\page\system\contents\menu\main::types()}}
+</select>
+</div>
+
+<div class="menu-list">
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th class="sort">sort</th>
+      <th class="parent">parent</th>
+      <th class="name">name</th>
+      <th class="auth">auth</th>
+      <th class="icon">icon</th>
+      <th class="link">link</th>
+      <th class="html">html</th>
+    </tr>
+  </thead>
+  <tbody>
+{{php:\page\system\contents\menu\main::datas()}}
+  </tbody>
+</div>
+
+</div>

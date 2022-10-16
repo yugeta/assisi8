@@ -1,0 +1,16 @@
+<script src="plugin/fileupload/src/images.js?{{php:\mynt::currentTime()}}"></script>
+<!-- <script src="plugin/fileupload/src/sound.js?{{php:\mynt::currentTime()}}"></script>
+<script src="plugin/fileupload/src/video.js?{{php:\mynt::currentTime()}}"></script> -->
+<script src="plugin/fileupload/src/fileupload.js?{{php:\mynt::currentTime()}}"></script>
+
+<script src="plugin/modal_js/src/modal.js?{{php:\mynt::currentTime()}}"></script>
+<link rel="stylesheet" href="page/system/contents/media/modules/upload.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/media/modules/upload.js?{{php:\mynt::currentTime()}}"></script>
+
+<input type="hidden" id="page" value="{{globals:page[page]}}">
+
+{{file:page/system/contents/media/html/upload_inner.html}}
+
+<script>
+new $$upload();
+</script>

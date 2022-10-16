@@ -1,0 +1,70 @@
+h2{
+  text-align:left;
+  
+  color:#66F;
+  font-size : 24px;
+  font-weight:bold;
+}
+
+.config-inputs{
+  /* padding-left:0px; */
+}
+
+.config-inputs label{
+  width:160px;
+  display:inline-block;
+  
+  padding-right:10px;
+  color:#666;
+}
+
+.config-inputs div.input{
+  width:300px;
+  display:inline-block;
+}
+.config-inputs div.input input{
+  width:100%;
+}
+
+.config-inputs p{
+  display:block;
+  font-size:10px;
+  
+  color:#888;
+}
+
+div.btn{
+  text-align:center;
+  width:100%;
+}
+div.btn button{
+  display:inline-block;
+}
+
+.required{
+  color:red;
+  font-size:18px;
+}
+
+@media (max-width: 767px) {
+  h2{
+    margin:20px 0px;
+  }
+  .config-inputs label{
+    text-align:left;
+  }
+  .config-inputs p{
+    margin:5px 0px 20px 10px;
+  }
+}
+@media (min-width: 768px) {
+  h2{
+    margin:20px 0;
+  }
+  .config-inputs label{
+    text-align:right;
+  }
+  .config-inputs p{
+    margin:5px 0px 20px 170px;
+  }
+}

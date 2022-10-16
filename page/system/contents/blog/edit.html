@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="page/system/contents/blog/modules/edit/dropdown.css?{{php:\mynt::currentTime()}}">
+<link rel="stylesheet" href="page/system/contents/blog/modules/edit/edit.css?{{php:\mynt::currentTime()}}">
+<link rel="stylesheet" href="page/system/contents/blog/modules/edit/form.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/blog/modules/edit/addTags.js?{{php:\mynt::currentTime()}}"></script>
+<script src="page/system/contents/blog/modules/edit/dropdown.js?{{php:\mynt::currentTime()}}"></script>
+<script src="page/system/contents/blog/modules/edit/edit_tempSave.js?{{php:\mynt::currentTime()}}"></script>
+
+
+<div><a href="?p=system&c=blog/lists&status={{get:status}}&category={{get:category}}">← Blog Lists</a></div>
+<h1>Blog Edit</h1>
+
+<form name='form1' method='post' class="form-horizontal blog-edit" action="{{php:\lib\url\common::getUri()}}">
+	<input type='hidden' name='php' value='\page\system\contents\blog\edit::post' />
+	<input type="hidden" name="id" value="{{get:id}}">
+	<input type="hidden" name="mode" value="">
+	<input type="hidden" name="entry" value="{{php:\page\system\contents\blog\edit::getPageInfoString('entry','{{get:category}}','{{get:id}}')}}">
+
+	<div class="page-column-1">
+		<div class='col-sm-8'>
+			<div class='base-default base-color-gray'>
+				{{file:page/system/contents/blog/html/edit/title.html}}
+				{{file:page/system/contents/blog/html/edit/tags.html}}
+				{{file:page/system/contents/blog/html/edit/source.html}}
+				{{file:page/system/contents/blog/html/edit/buttons.html}}
+			</div>
+		</div>
+
+		<div class='col-sm-4'>
+			<div class='base-default base-color-gray'>
+				{{file:page/system/contents/blog/html/edit/eyecatch.html}}
+				{{file:page/system/contents/blog/html/edit/status.html}}
+				{{file:page/system/contents/blog/html/edit/schedule.html}}
+				{{file:page/system/contents/blog/html/edit/category.html}}
+				{{file:page/system/contents/blog/html/edit/tag.html}}
+				{{file:page/system/contents/blog/html/edit/info.html}}
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<!-- <div id="addtag_code">
+	<p>ソースコード挿入</p>
+	<textarea class="form-control"></textarea>
+	<button class="btn btn-default btn-close" type="button">閉じる</button>
+	<button class="btn btn-default btn-insert" type="button">挿入</button>
+</div> -->
+
+

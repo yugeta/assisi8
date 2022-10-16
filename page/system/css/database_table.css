@@ -1,0 +1,165 @@
+table{
+  border-collapse:collapse;
+  /* width:100%; */
+}
+
+table th,
+table td{
+  border:1px solid #666;
+  padding:4px;
+  width:80px;
+  min-width:80px;
+  white-space:nowrap;
+}
+
+table th{
+  text-align:center;
+  background-color:#eee;
+}
+
+.table-responce{
+  overflow-x:auto;
+}
+
+.table-responce thead .not-null{
+  display:inline-block;
+  font-size:10px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background-color:red;
+  color:white;
+  text-align:center;
+  line-height:14px;
+  border:0;
+  margin:2px;
+  padding:0;
+}
+.table-responce thead .auto-increment{
+  display:inline-block;
+  font-size:10px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background-color:blue;
+  color:white;
+  text-align:center;
+  line-height:14px;
+  border:0;
+  margin:0 0 0 4px;
+  padding:0;
+}
+.table-responce thead .index-config{
+  display:inline-block;
+  font-size:10px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background-color:orange;
+  color:white;
+  text-align:center;
+  line-height:14px;
+  border:0;
+  margin:0 0 0 4px;
+  padding:0;
+}
+.table-responce thead th{
+  white-space:nowrap;
+}
+
+.table-responce tfoot tr{
+  background-color:#EFE;
+}
+.table-responce tbody td{
+  padding:4px;
+  width:80px;
+}
+.table-responce tbody tr:hover{
+  background-color:#EEF;
+}
+.table-responce tfoot td{
+  padding:0px;
+}
+.table-responce tbody textarea,
+.table-responce tbody input,
+.table-responce tfoot input{
+  border:0;
+  padding:0;
+  margin:0;
+  background-color:transparent;
+  width:100%;
+  height:auto;
+  min-width:auto;
+  min-height:auto;
+  height:20px;
+}
+.table-responce tfoot th.add{
+  background-color:#CFC;
+  cursor:pointer;
+}
+.table-responce tfoot th.add:hover{
+  background-color:#AFA;
+}
+.table-responce tfoot td{
+  padding:2px 4px;
+}
+.table-responce tfoot .auto-increment{
+  font-size:10px;
+  color:#AAA;
+  line-height:10px;
+}
+.table-responce tbody td textarea::placeholder
+.table-responce tbody td input::placeholder,
+.table-responce tfoot td input::placeholder{
+  color:#AAA;
+}
+.table-responce tbody tr[data-edit-flg="1"] td{
+  /* padding:0; */
+}
+.table-responce tbody tr[data-edit-flg="1"] th{
+  background-color:#CFC;
+  cursor:pointer;
+}
+.table-responce tbody tr[data-edit-flg="1"] th:hover{
+  background-color:#AFA;
+}
+
+tbody th,
+tfoot th{
+  position:relative;
+}
+tfoot th button{
+  display:none;
+}
+button.close{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:20px;
+  height:20px;
+  min-width:auto;
+  min-height:auto;
+  /* background-color:red; */
+  border-radius:0;
+
+  border-top:10px solid red;
+  border-left:10px solid red;
+  border-bottom:10px solid transparent;
+  border-right:10px solid transparent;
+}
+button.close:before{
+  /* content:url(../../img/close.svg); */
+  content:"";
+  width:100%;
+  height:1px;
+  border-top:4px solid white;
+}
+button.close svg{
+  position:absolute;
+  top:-6px;
+  left:-7px;
+  width:6px;
+  height:6px;
+  fill:white;
+}
+

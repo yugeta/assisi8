@@ -1,0 +1,32 @@
+[
+  {
+    "type" : "json",
+    "name" : "JSON",
+    "memo" : "",
+    "flg"  : 0
+  },
+  {
+    "type" : "mysql",
+    "name" : "MySQL",
+    "memo" : "",
+    "flg"  : 1
+  },
+  {
+    "type" : "net",
+    "name" : "Network",
+    "memo" : "",
+    "flg"  : 1
+  },
+  {
+    "type" : "sqlite",
+    "name" : "SQLite",
+    "memo" : "",
+    "flg"  : 1
+  },
+  {
+    "type" : "csv",
+    "name" : "CSV",
+    "memo" : "",
+    "flg"  : 1
+  }
+]

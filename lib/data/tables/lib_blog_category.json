@@ -1,0 +1,33 @@
+{
+  "info" : {
+    "name" : "BLOGカテゴリー",
+    "type" : "overwrite",
+    "memo" : "サイト内で複数のブログを構築できます。"
+  },
+  "columns" : {
+    "id" : {
+      "name"   : "ID",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+    "name" : {
+      "name"   : "名前",
+      "type"   : "VARCHAR",
+      "length" : 100
+    },
+    "users" : {
+      "name"   : "ユーザー一覧",
+      "type"   : "TEXT"
+    },
+    "memo" : {
+      "name"   : "メモ",
+      "type"   : "TEXT"
+    },
+    "entry" : {
+      "name"   : "登録日",
+      "type"   : "VARCHAR",
+      "length" : 14
+    }
+  }
+}

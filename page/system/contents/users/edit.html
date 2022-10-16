@@ -1,0 +1,82 @@
+<!-- <link rel="stylesheet" href="mynt/system/page/css/account_add.css?{{method:\mynt::currentTime()}}">
+<script src="mynt/system/page/js/{{request:p}}.js?{{method:\mynt::currentTime()}}"></script> -->
+<link rel="stylesheet" href="page/system/contents/users/edit.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/users/edit.js?{{php:\mynt::currentTime()}}"></script>
+
+
+<div class="error-message">{{request:errorMessage}}</div>
+&nbsp;
+
+<h1 class="panel-heading">アカウント編集</h1>
+
+<div class="panel-body table-responsive">
+	<form name='form1' method='post' class="form-horizontal" data-action="{{php:\mynt\lib\url::getUrl()}}">
+		<input type="hidden" name="php" value="\page\system\contents\users\users::request_edit()">
+		<input type="hidden" name="redirect" value="?p=system&c=users/index">
+		<!-- <input type="hidden" name="account[entry]" value="{{php:\page\system\contents\users\users::getValue_account('{{get:id}}','entry')}}"> -->
+		<input type="hidden" name="account[id]" value="{{get:id}}">
+
+		<div class="form-horizontal">
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[mail]">メールアドレス</label>
+				<div class="col-sm-9">
+					<input type='text' id="account[mail]" name='account[mail]' value='{{php:\page\system\contents\users\users::getValue_account("{{get:id}}","mail")}}' class='form-control' placeholder='メールアドレスを入力してください' autocomplete="off"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[password]">パスワード</label>
+				<div class="col-sm-9">
+					<input type='password' id="account[password]" name='account[password]' value='' class='form-control' placeholder='パスワードを変更する場合に入力してください。' autocomplete="new-password"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[password2]">パスワード確認</label>
+				<div class="col-sm-9">
+					<input type='password' id="account[password2]" name='account[password2]' value='' class='form-control' placeholder='変更の際に上記と同じパスワードを入力してください。' autocomplete="new-password"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[auth]">権限</label>
+				<div class="col-sm-9">
+					<select id="account[auth]" name='account[auth]' class='form-control'>
+						{{php:\page\system\contents\users\users::viewAuth_options_select({{get:id}})}}
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="property[name]">名前</label>
+				<div class="col-sm-9">
+					<input type='text' id="property[name]" name='property[name]' value='{{php:\page\system\contents\users\users::getValue_property("{{get:id}}","name")}}' class='form-control' placeholder='お名前を入力してください。' />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="property[memo]">コメント</label>
+				<div class="col-sm-9">
+					<textarea type='password' id="property[memo]" name='property[memo]' class='form-control' placeholder='コメントを入力してください。'>{{php:\page\system\contents\users\users::getValue_property("{{get:id}}","memo")}}</textarea>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for=""></label>
+				<div class="col-sm-9">
+					<button type="submit" class='btn btn-default btn-post'>更新</button>
+					<button type="button" class="btn btn-default btn-cancel">キャンセル</button>
+					<button type="button" class="btn btn-default btn-remove">削除</button>
+				</div>
+			</div>
+
+		</div>
+	</form>
+</div>
+
+<form name='form_remove' method='post' class="form-horizontal" data-action="{{php:\mynt\lib\url::getUrl()}}">
+	<input type="hidden" name="php" value="\page\system\contents\users\users::request_del()">
+	<input type="hidden" name="redirect" value="?p=system&c=users/index">
+	<input type="hidden" name="id" value="{{get:id}}">
+</form>

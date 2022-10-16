@@ -1,0 +1,97 @@
+[data-hidden="1"]{
+  display:none!important;
+}
+
+/* Group */
+ul.gadget-groups{
+  margin-top:0;
+  margin-bottom:0;
+  list-style : disc;
+}
+ul.gadget-groups,
+  .gadget-groups li{
+    
+    /* list-style:none; */
+    margin:0;
+    padding:0;
+  }
+  /* ul.gadget-groups{
+    margin-top:5px;
+  } */
+  .gadget-groups li{
+    display:block;
+    padding:4px;
+    /* padding:5px 10px; */
+    /* background-color:#d99; */
+    margin-bottom:4px;
+    cursor:pointer;
+    /* color:white; */
+  }
+  .gadget-groups li.active{
+    background-color:#cff2ac;
+  }
+  .gadget-groups li:hover{
+    opacity:0.5;
+  }
+
+/* Tag */
+ul.gadget-tags,
+.gadget-tags li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+ul.gadget-tags{
+  margin-top:5px;
+}
+.gadget-tags li{
+  display:inline-block;
+  padding:5px 10px;
+  background-color:#99D;
+  margin-bottom:4px;
+  cursor:pointer;
+  border-radius:4px;
+  color:white;
+}
+.gadget-tags li:hover{
+  opacity:0.5;
+}
+.gadget-tags li.over{
+  background-color:transparent;
+  cursor:normal;
+  color:black;
+  font-size:10px;
+}
+.gadget-tags li.over:hover{
+  opacity:1.0;
+}
+
+/* SNS */
+.gadget-sns,
+.gadget-sns > li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.gadget-sns > li{
+  display:inline-block;
+  width:30px;
+  height:30px;
+  margin:4px;
+  cursor:pointer;
+}
+.gadget-sns > li:hover{
+  opacity:0.5;
+}
+.gadget-sns > li img{
+  width:100%;
+  height:100%;
+}
+
+
+/* Relation */
+.gadget-relations{
+
+}
+
+

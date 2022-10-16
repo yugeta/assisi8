@@ -1,0 +1,53 @@
+{
+  "info" : {
+    "name" : "メールアカウント発行用キャッシュデータ",
+    "type" : "add",
+    "mode" : "system"
+  },
+  "columns" : {
+    "id":{
+      "name"   : "連番 xxxデータID",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+
+    "account_id":{
+      "name"   : "パスワードリセットの時に仕様",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : ""
+    },
+
+    "hash" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : "",
+      "index"  : "md5"
+    },
+    "mode" : {
+      "type"   : "VARCHAR",
+      "length" : 20,
+      "option" : "",
+      "index"  : ""
+    },
+
+    
+    "mail" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+    "md5" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 20,
+      "option" : ""
+    }
+  }
+}

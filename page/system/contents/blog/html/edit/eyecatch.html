@@ -1,0 +1,16 @@
+<div class="control-group">
+  <label class="control-label" for="title"><i class='glyphicon glyphicon-eye-open'></i> Eye Catch</label>
+  <div class="controls">
+    <button type="button" class="btn btn-default eyecatch-pickup-cutton" id="eyecatch_add" style="display:none;">
+        <!-- <img src="{{GLOBALS:servicePath}}/img/picture.svg"> -->
+      <span>Pickup Eye-catch</span>
+    </button>
+    <button type="button" class="btn btn-default eyecatch-pickup-cutton" id="eyecatch_del" style="display:none;">
+      <!-- <img src="{{GLOBALS:servicePath}}/img/trash.svg"> -->
+      <span>Remove Eye-catch</span>
+    </button>
+    <div id="eyecatch"><img class='eycatch_img' src='{{METHOD:\MYNT\SYSTEM\PICTURE::getEyecatchFilePath({{get:file}})}}'></div>
+    <input type="hidden" name="eyecatch" value="{{php:\page\system\contents\blog\edit::getPageInfoString('image','{{get:category}}','{{get:id}}')}}">
+    <input type="hidden" name="eyecatch_ext" value="{{METHOD:\MYNT\SYSTEM\BLOG_EDIT::getPageInfoString_eyecatch("{{get:file}}","extension")}}">
+  </div>
+</div>

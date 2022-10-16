@@ -1,0 +1,50 @@
+.breadcrumbs{
+  display:inline-block;
+}
+
+.breadcrumbs > span{
+  display:inline-block;
+  border:1px solid #CCC;
+  padding:8px 4px;
+  text-align:center;
+  font-size:10px;
+  position:relative;
+  margin-top:8px;
+  margin-left:16px;
+  min-height:50px;
+  height:100%;
+  border-radius:4px;
+  float:left;
+}
+
+.breadcrumbs > span:before{
+  content:"";
+  display:block;
+  position:absolute;
+  width: 12px;
+	height: 42px;
+  right: -25px;
+  top:4px;
+  /* background-color:#DDD; */
+	border-top: 21px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 21px solid transparent;
+	border-left: 12px solid #CCC;
+}
+
+.breadcrumbs > span.active{
+  background-color:#FEE;
+}
+.error-message{
+  color:red;
+  margin:20px;
+  padding:10px;
+  border:1px solid red;
+}
+.error-message:empty{
+  display:none;
+}
+.error-message ol{
+  margin:0;
+  /* padding:0; */
+}

@@ -1,0 +1,54 @@
+{
+  "info" : {
+    "name" : "アカウント",
+    "type" : "add",
+    "mode" : "system"
+  },
+  "columns" : {
+    "id":{
+      "name"   : "ID",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+      "memo"   : "連番 xxxデータID",
+      "format" : "",
+      "input"  : "none"
+    },
+    "auth" : {
+      "name"   : "権限",
+      "type"   : "VARCHAR",
+      "length" : 10,
+      "option" : "",
+      "format" : "text",
+      "relation" : "lib_auth/value/name",
+      "input"  : "select"
+    },
+    "mail" : {
+      "name"   : "メール",
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : "UNIQUE",
+      "format" : "mail",
+      "input"  : "text",
+      "require": 1
+    },
+    "pass" : {
+      "name"   : "パスワード",
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : "",
+      "memo"   : "solt",
+      "format" : "password",
+      "input"  : "password",
+      "require": 1
+    },
+    "entry" : {
+      "name"   : "登録日",
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : "",
+      "format" : "date",
+      "input"  : "none"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="page/system/contents/blog/modules/category/edit.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/blog/modules/category/edit.js?{{php:\mynt::currentTime()}}"></script>
+
+<h1>category edit</h1>
+
+<div class="panel-body table-responsive">
+  <form  name='form1' method='post' class="form-horizontal" >
+    <input type="hidden" name="php" value="\page\system\contents\blog\category::post('{{get:id}}')">
+		<input type="hidden" name="redirect" value="?p=system&c=blog/category_lists">
+
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Name</label>
+				<div class="col-sm-9">
+					<input type='text' name='name' value='{{php:\page\system\contents\blog\category::getValue("{{get:id}}","name")}}' class='form-control' placeholder='名前を入力してください' autocomplete="off"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Users</label>
+				<div class="col-sm-9 user-area">
+					<div class="users">
+						<span class="area"></span>
+						<div class="user-add"></div>
+					</div>
+					<input type='hidden' name='users' value='{{php:\page\system\contents\blog\category::getValue("{{get:id}}","users")}}' class='form-control' placeholder='' autocomplete="new-password"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Memo</label>
+				<div class="col-sm-9">
+					<textarea name='memo' class='form-control' placeholder='コメントを入力してください。'>{{php:\page\system\contents\blog\category::getValue("{{get:id}}","memo")}}</textarea>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for=""></label>
+				<div class="col-sm-9">
+					<button type="submit" class='btn btn-default btn-post'>更新</button>
+					<!-- <button type="button" class="btn btn-default btn-cancel">キャンセル</button> -->
+					<button type="button" class="btn btn-default btn-remove" data-id="{{get:id}}">削除</button>
+				</div>
+			</div>
+
+		</div>
+  </form>
+</div>

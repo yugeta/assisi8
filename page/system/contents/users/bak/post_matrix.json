@@ -1,0 +1,59 @@
+{
+  "template" : "001",
+
+  "database" : "lib_auth",
+
+  "header" : [
+    "#","ID","Mail","Auth","Name","Memo","Entry"
+  ],
+
+  "list_button" : {
+    "add" : {"type" : "button" , "value" : "追加"}
+  },
+
+
+  "input" : [
+    {
+      "type" : "text",
+      "name" : "mail",
+      "default_value" : "",
+      "placeholder" : ""
+    },
+    {
+      "type" : "password",
+      "name" : "pass",
+      "default_value" : "",
+      "placeholder" : ""
+    },
+    {
+      "type" : "password",
+      "name" : "pass2",
+      "default_value" : "",
+      "placeholder" : ""
+    },
+    {
+      "type" : "select",
+      "name" : "auth",
+      "options" : [
+        {"key" : ""        , "value" : "一般ユーザー"},
+        {"key" : "support" , "value" : "サポート担当者"},
+        {"key" : "service" , "value" : "サービス担当者"},
+        {"key" : "admin"   , "value" : "システム管理者"}
+      ],
+      "default_value" : "",
+      "placeholder" : ""
+    },
+    {
+      "type" : "text",
+      "name" : "name",
+      "default_value" : "",
+      "placeholder" : ""
+    },
+    {
+      "type" : "textarea",
+      "name" : "memo",
+      "default_value" : "",
+      "placeholder" : ""
+    }
+  ]
+}

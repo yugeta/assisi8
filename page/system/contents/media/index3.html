@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="page/system/contents/media/modules/common.css?{{php:\mynt::currentTime()}}">
+
+<!-- <script src="mynt/lib/js/ajax.js?{{config:default/version}}"></script>
+<script src="mynt/lib/js/svgControl.js?{{config:default/version}}"></script> -->
+<script src="page/system/contents/media/modules/cookie.js?{{php:\mynt::currentTime()}}"></script>
+<!-- <script>
+  setTimeout(function(){new $$SVG;} , 500);
+</script> -->
+<script src="page/system/contents/media/modules/uniqueUser.js?{{php:\mynt::currentTime()}}"></script>
+
+<script src="page/system/contents/media/modules/exif.js?{{php:\mynt::currentTime()}}"></script>
+<script src="plugin/fileupload/images.js?{{php:\mynt::currentTime()}}"></script>
+<script src="plugin/way-grid/src/way_grid.js?{{php:\mynt::currentTime()}}"></script>
+<script src="plugin/modal_js/src/modal.js?{{php:\mynt::currentTime()}}"></script>
+<link rel="stylesheet" href="page/system/contents/media/modules/pics.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/media/modules/pics.js?{{php:\mynt::currentTime()}}"></script>
+<!-- <script src="mynt/service/node/socket_client.js?{{php:\mynt::currentTime()}}"></script> -->
+
+
+
+
+<div class="contents">
+
+  <input type="hidden" id="uid" value="{{session:login_id}}">
+  <input type="hidden" id="bid" value="{{php:\mynt\index\index::getLocalStorage_bid()}}">
+  <input type="hidden" id="take_uid" value="{{php:\mynt\index\index::getUid()}}">
+  <input type="hidden" id="wall_code" value="{{request:wall_code}}">
+
+  <h1 class="page-title">Media</h1>
+
+  <div class="button-area">
+    <button type="button" class="home" onclick="javascript:location.href='./';">
+        <svg src="page/system/contents/media/img/home.svg"></svg>
+    </button>
+
+    <button type="button" id="fileupload">Upload</button>
+  </div>
+
+
+  <div style="display:none;">
+    <select>
+      <option value="">ラベル無し</option>
+    </select>
+  </div>
+
+  <div class="pictures">
+
+    <div class="lists-area">
+    <ul class="lists way-grid"></ul>
+    </div>
+
+    <div class="loading">
+      <img class="loading" src="page/system/contents/media/img/loading-process.svg">
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+{
+  "info" : {
+    "name" : "メールアカウント発行用設定事項",
+    "type" : "static",
+    "mode" : "system"
+  },
+  "columns" : {
+    "type":{
+      "name"   : "アカウント登録モードタイプ",
+      "type"   : "VARCHAR",
+      "length" : 20,
+      "memo"   : "[ 0:mail , 1:post-only ]"
+    },
+    "from_mail":{
+      "name"   : "送信元メールアドレス",
+      "type"   : "VARCHAR",
+      "length" : 100
+    },
+    "memo"     :{
+      "name"   : "メモ",
+      "type"   : "TEXT"
+    },
+
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    }
+  }
+}

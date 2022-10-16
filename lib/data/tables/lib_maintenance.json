@@ -1,0 +1,42 @@
+{
+  "info" : {
+    "name" : "メンテナンス用データ",
+    "type" : "add",
+    "mode" : "system"
+  },
+  "columns" : {
+    "id":{
+      "name"   : "連番 xxxデータID",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+
+    "switch" : {
+      "memo"   : "on(1),off(0)",
+      "type"   : "VARCHAR",
+      "length" : 1,
+      "option" : "",
+      "index"  : ""
+    },
+    "start" : {
+      "memo"   : "start : yyyymmddhhiiss",
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : "",
+      "index"  : ""
+    },
+    "end" : {
+      "memo"   : "end : yyyymmddhhiiss",
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    },
+
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    }
+  }
+}

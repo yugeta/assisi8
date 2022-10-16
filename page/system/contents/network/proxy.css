@@ -1,0 +1,119 @@
+
+.lists{
+  display:block;
+  width:80%;
+  margin:10px auto;
+  overflow-x : auto;
+}
+@media screen and (max-width: 499px){
+  .lists{
+    width:100%;
+  }
+}
+@media screen and (min-width: 500px){
+  .lists{
+    width:80%;
+  }
+}
+
+.lists table{
+  display:table;
+  border-collapse:collapse;
+  border:1px solid #ccc;
+  width:100%;
+}
+
+.lists thead th{
+  background-color:#eee;
+  padding : 5px;
+  border:1px solid #ccc;
+}
+
+
+.lists tbody tr{
+  display:table-row;
+  cursor:pointer;
+  border-bottom:1px solid #ccc;
+}
+.lists tbody tr[data-flg="false"]{
+  background-color:#eee;
+}
+.lists table[data-view-mode="short"] tbody tr[data-flg="false"]{
+  display:none;
+}
+.lists tbody tr > *{
+  display:table-cell;
+  vertical-align:middle;
+  padding:4px 10px;
+}
+.lists tbody tr:last-child{
+  border-bottom:0;
+}
+.lists tbody tr[data-flg="true"]:hover{
+  background-color:#eef;
+}
+
+.lists tbody{
+  counter-reset:num 0;
+}
+.lists tbody .num:after{
+  counter-increment: num 1;
+  content: counter(num);
+}
+.lists tbody tr > .num{
+  width:40px;
+  text-align:center;
+  background-color:rgba(0,0,0,0.05);
+  font-weight:normal;
+}
+
+.lists tbody tr > *{
+  border-right:1px solid #ccc;
+}
+.lists tbody tr .check{
+  text-align:center;
+}
+
+
+
+/* Add */
+
+.add-area button{
+  display:block;
+  /* width:200px; */
+  margin:10px auto;
+  padding:4px 10px;
+  text-align:center;
+  background-color:#0095f6;
+  border:0;
+}
+.add-area button.influencer{
+  background-color:#F59A18;
+}
+.add-area button.add svg{
+  width:14px;
+  height:14px;
+  vertical-align:middle;
+  fill : white;
+  margin-right:10px;
+}
+.add-area button span{
+  font-size:14px;
+  vertical-align:middle;
+  color:white;
+}
+
+
+/* COntrol */
+.control{
+  text-align:center;
+}
+.control input[type="checkbox"]{
+  min-width:auto;
+  min-height:auto;
+  width:16px;
+  height:16px;
+  vertical-align:middle;
+  margin:2px 4px;
+}
+

@@ -1,0 +1,45 @@
+{{php:\lib\design\modules::load("login","	")}}
+
+<div class="progress">
+  <ul>
+    <li>メールアドレス<br>の登録</li>
+    <li class="active">認証コード<br>の確認</li>
+    <li>パスワード<br>の登録</li>
+  </ul>
+</div>
+
+<div class="error">{{post:message}}</div>
+
+<form name="login" method="post">
+  <input type="hidden" name="php" value="\page\system\contents\account\entry::post_code()">
+  <!-- <input type="hidden" name="redirect" value="{{php:\lib\url\common::getUrl()}}?p=system&f=plane&c=account/pass"> -->
+  <!-- <input type="hidden" name="next" value="account/pass"> -->
+
+  <!-- <input type="hidden" name="hash" value="{{php:\page\system\contents\account\data::_getHashValue({{get:id}},'entry','hash')}}">
+  <input type="hidden" name="mail" value="{{php:\page\system\contents\account\data::_getHashValue({{get:id}},'entry','mail')}}"> -->
+  <input type="hidden" name="mode" value="entry">
+
+
+
+  <div class="login">
+
+    <div class="input-area">
+      <div class="login-logo">
+        <h2>認証コード</h2>
+      </div>
+
+      <div class="caution" style="margin:40px auto;">
+        送付されたメールに書かれている認証コードを入力して送信ボタンを押してください。
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon">認証コード</span>
+        <input class="form-control" type="code" name="code" value="" autocomplete="new-password">
+      </div>
+
+      <div class="login-submit">
+        <button type="submit" class="btn btn-primary">送信</button>
+      </div>
+    </div>
+  </div>
+</form>

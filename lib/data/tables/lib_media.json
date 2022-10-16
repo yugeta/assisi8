@@ -1,0 +1,54 @@
+{
+  "info" : {
+    "name" : "MEDIA",
+    "type" : "add"
+  },
+  "columns" : {
+    
+
+    "id" : {
+      "name"   : "ID",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+    "type" : {
+      "name"   : "ファイルタイプ",
+      "type"   : "VARCHAR",
+      "length" : "10",
+      "memo"   : "[ image(jpg,jpeg,png,gif) , sound(mp3,m4a) , video(mp4,m4v) , file(...) ]"
+    },
+
+    "currentName" : {
+      "name"   : "サーバーファイル名",
+      "type"   : "VARCHAR",
+      "length" : 100
+    },
+
+    "fileName" : {
+      "name"   : "元ファイル名",
+      "type"   : "VARCHAR",
+      "length" : 200
+    },
+    "extension" : {
+      "name"   : "拡張子",
+      "type"   : "VARCHAR",
+      "length" : 10
+    },
+    "size" : {
+      "name"   : "ファイルサイズ",
+      "type"   : "INT",
+      "length" : 11
+    },
+    "memo" : {
+      "name"   : "メモ",
+      "type"   : "TEXT"
+    },
+    
+    "entry" : {
+      "name"   : "登録日",
+      "type"   : "VARCHAR",
+      "length" : 14
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "info" : {
+    "name" : "権限リスト",
+    "type" : "overwrite"
+  },
+  "columns" : {
+    "id" : {
+      "name"   : "ID",
+      "type"   : "INT",
+      "length" : 10,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+      "format" : "",
+      "input"  : "none",
+      "require": 1
+    },
+    "rank" : {
+      "name"   : "ランク値",   
+      "type"   : "INT",
+      "length" : 3,
+      "option" : "",
+      "format" : "text",
+      "input"  : "text",
+      "require": 1,
+      "sort"   : 1
+    },
+    "name" : {
+      "name"   : "表示",
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : "",
+      "format" : "text",
+      "input"  : "text",
+      "require": 1
+    },
+    "value" : {
+      "name"   : "key",
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : "",
+      "format" : "text",
+      "input"  : "text",
+      "require": 1
+    },
+    "entry" : {
+      "name"   : "登録日",
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : "",
+      "format" : "date",
+      "input"  : "none",
+      "require": 1
+    }
+  }
+}

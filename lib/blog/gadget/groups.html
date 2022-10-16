@@ -1,0 +1,17 @@
+<div class="label">Groups</div>
+<div class="content">
+  <ul class="gadget-groups">
+    {{php:\lib\blog\php\group::html_view_li("{{get:type}}","{{get:group}}")}}
+  </ul>
+</div>
+<input type="hidden" name="group" value='{{php:\lib\blog\php\data::get_value({{get:type}},{{get:id}},"group")}}'>
+<script>
+  let id = document.querySelector("input[name='group']").value;
+  let elms = document.querySelectorAll(".gadget-groups li");
+  for(let i=0; i<elms.length; i++){
+    if(elms[i].getAttribute("data-id") == id){
+      elms[i].setAttribute("class" , "active");
+      break;
+    }
+  }
+</script>

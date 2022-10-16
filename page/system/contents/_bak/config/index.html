@@ -1,0 +1,21 @@
+<!-- <link rel="stylesheet" href="page/system/contents/database/common.css?{{method:\mynt::currentTime()}}" /> -->
+<link rel="stylesheet" href="page/install/common.css?{{method:\mynt::currentTime()}}">
+<script src="page/install/common.js?{{method:\mynt::currentTime()}}"></script>
+
+<!-- <h1>Config</h1> -->
+
+<div class="message-error">{{post:message_error}}</div>
+<div class="message-success">{{post:message_success}}</div>
+
+
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\lib\install\setup::save_config()" />
+  <input type="hidden" name="exit" value="true" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="4">
+{{file:page/install/contents/config.html}}
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">送信</button>
+  </div>
+</form>

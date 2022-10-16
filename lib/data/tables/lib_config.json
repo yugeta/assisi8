@@ -1,0 +1,39 @@
+{
+  "info" : {
+    "name" : "Config設定",
+    "type" : "add",
+    "mode" : "system"
+  },
+  "columns" : {
+    "id" : {
+      "type"   : "INT",
+      "length" : 10,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+    "type" : {
+      "type"   : "VARCHAR",
+      "length" : 10,
+      "option" : ""
+    },
+    "name" : {
+      "type"   : "VARCHAR",
+      "length" : 20,
+      "option" : ""
+    },
+    "value" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+    "date" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    },
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    }
+  }
+}

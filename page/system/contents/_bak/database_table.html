@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="mynt/system/page/css/{{get:p}}.css?{{php:\mynt::currenttime()}}">
+<script src="mynt/system/page/js/{{get:p}}.js?{{php:\mynt::currenttime()}}"></script>
+<script src="mynt/lib/js/ajax.js?{{php:\mynt::currentTime()}}"></script>
+
+<input type="hidden" id="login_id" name="login_id" value="{{session:login_id}}">
+
+
+<h1>Database-Table : {{get:table_name}}</h1>
+
+
+
+<div class="select-index">
+  <select name="indexes">
+    <option value="">INDEXの選択</option>
+{{php:\mynt\system\database_table::viewSelectIndex_option({{session:id}},{{get:table_name}})}}
+  </select>
+</div>
+
+<div class="table-responce">
+  <table>
+    <thead>
+{{php:\mynt\system\database_table::viewTableHead_th({{session:id}},{{get:table_name}})}}
+    </thead>
+    <tbody>
+{{php:\mynt\system\database_table::viewTableBody_tr({{session:id}},{{get:table_name}})}}
+    </tbody>
+    <tfoot>
+      <tr class='add'>
+{{php:\mynt\system\database_table::viewTableFoot_tr({{session:id}},{{get:table_name}})}}
+      </tr>
+    </tfoot>
+  </table>
+</div>

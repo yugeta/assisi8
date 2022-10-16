@@ -1,0 +1,28 @@
+{
+  "info" : {
+    "name" : "BLOGグループ",
+    "type" : "add"
+  },
+  "columns" : {
+    "id" : {
+      "name"   : "ID",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+    "name" : {
+      "name"   : "グルー名",
+      "type"   : "INT",
+      "length" : 11
+    },
+    "memo" : {
+      "name"   : "メモ",
+      "type"   : "TEXT"
+    },
+    "entry" : {
+      "name"   : "登録日",
+      "type"   : "VARCHAR",
+      "length" : 14
+    }
+  }
+}

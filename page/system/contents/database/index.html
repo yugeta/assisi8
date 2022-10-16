@@ -1,0 +1,67 @@
+<!-- <link rel="stylesheet" href="page/system/contents/database/common.css?{{method:\mynt::currentTime()}}" />
+<script src="page/system/contents/database/common.js?{{method:\mynt::currentTime()}}"></script> -->
+{{php:\lib\design\modules::load("database","	")}}
+<!-- <link rel="stylesheet" href="page/system/contents/install/common.css?{{method:\mynt::currentTime()}}">
+<script src="page/system/contents/install/common.js?{{method:\mynt::currentTime()}}"></script> -->
+{{php:\lib\design\modules::load("install","	")}}
+
+
+<div class="links">
+  <ul>
+    <li data-type="change" data-active="{{if:'{{get:type}}'==='change' || '{{get:type}}' === ''}}1{{/if}}">データベース切り替え</li>
+    <li data-type="edit" data-active="{{if:'{{get:type}}'==='edit'}}1{{/if}}">データベース編集</li>
+    <li data-type="new" data-active="{{if:'{{get:type}}'==='new'}}1{{/if}}">データベース新規作成</li>
+    <li data-type="content" data-active="{{if:'{{get:type}}'==='content'}}1{{/if}}">データベース内容</li>
+  </ul>
+</div>
+
+
+<div class="message-error">{{post:message_error}}</div>
+<div class="message-success">{{post:message_success}}</div>
+
+
+
+{{if:"{{get:type}}" === "content"}}
+{{file:page/system/contents/database/html/content.html}}
+
+
+{{elif:"{{get:type}}" === "new"}}
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\lib\install\setup::save_database_new()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="4">
+{{file:page/system/contents/install/html/account.html}}
+{{file:page/system/contents/install/html/database_new.html}}
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">送信</button>
+  </div>
+</form>
+
+
+{{elif:"{{get:type}}" === "edit"}}
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\lib\install\setup::save_database()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="4">
+{{file:page/system/contents/install/html/database.html}}
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">送信</button>
+  </div>
+</form>
+
+
+{{else}}
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\lib\install\setup::change_database()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="4">
+{{file:page/system/contents/install/html/database_change.html}}
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">送信</button>
+  </div>
+</form>
+
+{{/if}}

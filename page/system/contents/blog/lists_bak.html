@@ -1,0 +1,72 @@
+{{php:\lib\design\modules::load("blog","	")}}
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<div class='base-default base-color-green'>
+				<h1><i class='glyphicon glyphicon-list'></i> Blog Lists</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<ul class="nav nav-tabs">
+
+	<li role="presentation" class="{{if:'{{request:status}}'===''}}active{{/if}}">
+		<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="{{php:\lib\url\common::getUrl()}}?p={{get:p}}&c={{get:c}}">ALL ({{php:\page\system\contents\blog\lists::getPageCount("{{get:type}}","")}})</a>
+	</li>
+
+{{php:\page\system\contents\blog\lists::getPageCategoryLists_li("status")}}
+
+	<li role="presentation" class="{{if:'{{get:status}}'==='unregist'}}active{{/if}}">
+		<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="{{php:\lib\url\common::getUrl()}}?p={{get:p}}&c={{get:c}}&status=unregist">未登録 ({{php:\page\system\contents\blog\lists::getPageCount("unregist")}})</a>
+	</li>
+</ul>
+
+
+<div class=''>
+	<div class=''>
+		<div class="table-scroll">
+			<table class="table">
+				<thead class="thead-inverse">
+					<tr>
+						<th>#</th>
+						<th>イメージ</th>
+						<th>グループ</th>
+						<th>タイトル</th>
+						<th>ステータス</th>
+						<th>公開日</th>
+						<!-- <th>Update</th>
+						<th>Regist</th> -->
+					</tr>
+				</thead>
+				<tbody>
+{{php:\page\system\contents\blog\lists::viewPageLists_tr({{get:status}},{{get:page}})}}
+				</tbody>
+			</table>
+		</dev>
+	</div>
+</div>
+
+<div class=''>
+	<div class=''>
+		<p><a href="?p=blog/edit" class="btn btn-primary btn-lg" role="button">+ Add Blog</a></p>
+	</div>
+</div>
+
+<nav>
+	<ul class="pagination">
+		<li>
+			<a href="{{php:\page\system\contents\blog\lists::getUrl_pagenation_prev({{get:status}},{{get:page}})}}" aria-label="前のページへ">
+				<span aria-hidden="true">«</span>
+			</a>
+		</li>
+{{php:\page\system\contents\blog\lists::viewPagenation_li({{get:status}},{{get:page}})}}
+		<li>
+			<a href="{{php:\page\system\contents\blog\lists::getUrl_pagenation_next({{get:status}},{{get:page}})}}" aria-label="次のページへ">
+				<span aria-hidden="true">»</span>
+			</a>
+		</li>
+	</ul>
+</nav>

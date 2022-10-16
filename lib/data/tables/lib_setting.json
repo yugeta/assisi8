@@ -1,0 +1,36 @@
+{
+  "info" : {
+    "name" : "page設定",
+    "type" : "static",
+    "mode" : "system"
+  },
+  "columns" : {
+    "page" : {
+      "name"    : "page選択名",
+      "type"    : "VARCHAR",
+      "length"  : 100,
+      "default" : "sample"
+    },
+    "design" : {
+      "name"    : "design選択名",
+      "type"    : "VARCHAR",
+      "length"  : 100,
+      "default" : "sample"
+    },
+    "name" : {
+      "name"    : "サービス名",
+      "type"    : "VARCHAR",
+      "length"  : 100
+    },
+    "mail" : {
+      "name"    : "サポート用メールアドレス",
+      "type"    : "VARCHAR",
+      "length"  : 100
+    },
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    }
+  }
+}

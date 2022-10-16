@@ -1,0 +1,25 @@
+.error:empty,
+.success:empty{
+  display:none;
+}
+
+.error{
+  text-align:left;
+  margin:20px auto;
+  border:4px double red;
+  width:300px;
+  padding:10px 10px;
+  color:red;
+  border-radius:8px;
+  background-color:rgba(255,0,0,0.1);
+}
+.success{
+  text-align:left;
+  margin:20px auto;
+  border:4px double blue;
+  width:300px;
+  padding:10px 10px;
+  color:blue;
+  border-radius:8px;
+  background-color:rgba(0,0,255,0.1);
+}

@@ -1,0 +1,63 @@
+[
+  {"sort":1,"type":"side","name":"Link","auth":null,"link":"#link","html":"<span class='img'><svg src='page/system/img/icon/link.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    {"name":"サービスページ","link":"./","html":"<span class='img'><svg src='page/system/img/icon/home.svg'></svg></span><span class='txt'>{{name}}</span>"}
+  ]},
+  
+
+  {"type":"header","name":"Media","link":"?p=system&c=media","html":"<span class='img'><svg src='page/system/img/icon/pictures.svg'></svg></span><span class='txt'>{{name}}</span>"},
+
+  {"type":"header","name":"Blog","auth":null,"link":"#service","html":"<span class='img'><svg src='page/system/img/icon/blog.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    {"sort":1,"name":"Lists","link":"?p=system&c=blog/index","html":"<span class='img'><svg src='page/system/img/icon/list.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":2,"name":"Category","link":"?p=system&c=blog/category_lists","html":"<span class='img'><svg src='page/system/img/icon/category.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":3,"name":"Config","link":"?p=system&c=blog/config","html":"<span class='img'><svg src='page/system/img/icon/gear.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":4,"name":"Tag","link":"?p=system&c=blog/tag","html":"<span class='img'><svg src='page/system/img/icon/tag.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":5,"name":"Comment","link":"?p=system&c=blog/comment","html":"<span class='img'><svg src='page/system/img/icon/comments.svg'></svg></span><span class='txt'>{{name}}</span>"}
+  ]},
+
+  {"type":"header","name":"Contents","auth":null,"link":"#media","html":"<span class='img'><svg src='page/system/img/icon/paint.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    {"name":"Information","link":"?p=system&c=page/info","html":"<span class='img'><svg src='page/system/img/icon/info.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"name":"BBS","link":"?p=system&c=page/bbs","html":"<span class='img'><svg src='page/system/img/icon/voice.svg'></svg></span><span class='txt'>{{name}}</span>"}
+  ]},
+
+
+  {"sort":99,"type":"header","name":"Logout","auth":null,"link":"./?p=system&f=logout","html":"<span class='img'><svg src='page/system/img/icon/logout.svg'></svg></span><span class='txt'>{{name}}</span>"},
+
+  
+  {"sort":2,"type":"side","name":"Page","auth":null,"link":"#page","html":"<span class='img'><svg src='page/system/img/icon/page.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    {"sort":1,"name":"名称","link":"?p=system&c=page/index","html":"<span class='img'><svg src='page/system/img/icon/page.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":2,"name":"Manu","link":"?p=system&c=menu/index","html":"<span class='img'><svg src='page/system/img/icon/menu.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":3,"name":"Files","link":"?p=system&c=page/lists","html":"<span class='img'><svg src='page/system/img/icon/files.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    
+    {"flg":1,"sort":4,"name":"Plugin","link":"?p=system&c=plugin/index","html":"<span class='img'><svg src='page/system/img/icon/plug.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":5,"name":"Master","link":"?p=system&c=master/index","html":"<span class='img'><svg src='page/system/img/icon/data-maintenance.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":6,"name":"Database切替","link":"?p=system&c=database/index","html":"<span class='img'><svg src='page/system/img/icon/database.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":7,"name":"Page切替","link":"?p=system&c=page/setting","html":"<span class='img'><svg src='page/system/img/icon/page.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":8,"name":"Design切替","link":"?p=system&c=design/index","html":"<span class='img'><svg src='page/system/img/icon/paint.svg'></svg></span><span class='txt'>{{name}}</span>"}
+  ]},
+
+  {"sort":3,"type":"side","name":"Plugin","auth":null,"link":"#plugin","html":"<span class='img'><svg src='page/system/img/icon/plug.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    
+  ]},
+
+  {"sort":4,"type":"side","name":"System","auth":null,"link":"#system","html":"<span class='img'><svg src='page/system/img/icon/upload.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    {"sort":1,"name":"Users","link":"?p=system&c=users/index","html":"<span class='img'><svg src='page/system/img/icon/people.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":2,"name":"UserParent","link":"?p=system&c=users/parents","html":"<span class='img'><svg src='page/system/img/icon/share.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":3,"name":"Service","link":"?p=system&c=service/index","html":"<span class='img'><svg src='page/system/img/icon/cloud.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":4,"name":"Module","link":"?p=system&c=module/index","html":"<span class='img'><svg src='page/system/img/icon/block.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"flg":1,"name":"Manu","link":"?p=system&c=menu/index","html":"<span class='img'><svg src='page/system/img/icon/menu.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":5,"name":"Maintenance","link":"?p=system&c=maintenance/index","html":"<span class='img'><svg src='page/system/img/icon/lock.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":6,"name":"DB-Master","link":"?p=system&c=master","html":"<span class='img'><svg src='page/system/img/icon/database.svg'></svg></span><span class='txt'>{{name}}</span>"}
+  ]},
+
+  {"sort":5,"type":"side","name":"Network","auth":null,"link":"#network","html":"<span class='img'><svg src='page/system/img/icon/network.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    {"name":"Proxy","link":"?p=system&c=network/proxy","html":"<span class='img'><svg src='page/system/img/icon/connection.svg'></svg></span><span class='txt'>{{name}}</span>"}
+  ]},
+
+  {"sort":6,"type":"side","name":"Debug","auth":null,"link":"#debug","html":"<span class='img'><svg src='page/system/img/icon/bug.svg'></svg></span><span class='txt'>{{name}}</span>" , "lists":[
+    {"sort":1,"name":"Mail","link":"?p=system&c=debug/mail","html":"<span class='img'><svg src='page/system/img/icon/mail.svg'></svg></span><span class='txt'>{{name}}</span>"},
+    {"sort":2,"name":"Info","link":"?p=system&f=debug_info","html":"<span class='img'><svg src='page/system/img/icon/mail.svg'></svg></span><span class='txt'>{{name}}</span>"}
+  ]}
+
+
+]
+

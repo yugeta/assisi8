@@ -1,0 +1,45 @@
+{{php:\lib\auth\session::check_auth("","?p=system&f=login")}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MYNTpage</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="icon" type="image/svg+xml" href="page/system/img/favicon.svg" sizes="96x96">
+<!-- {{php:\lib\design\modules::load("head","	")}} -->
+  <link rel="stylesheet" href="lib/blog/blog.css">
+  <link rel="stylesheet" href="page/{{globals:config[page]}}/contents/blog/view.css">
+  <script src="plugin/code_view/src/code_view.js"></script>
+</head>
+
+<body>
+  
+  <h1 class="normal blog-single-title">{{php:\page\radio\contents\blog\view::str('1','{{get:id}}','title')}}</h1>
+  
+  <div class="content blog">
+    <!-- <div class="blog-property">
+      <div><img src="contents/img/icon/calendar.svg"><p class="date">{{php:\page\radio\contents\blog\view::str('1','{{get:id}}','date')}}</p></div>
+      <div><img src="contents/img/icon/list.svg"><p class="group">{{php:\page\radio\contents\blog\view::str('1','{{get:id}}','group')}}</p></div>
+      <div><img src="contents/img/icon/tag.svg"><p class="tag">{{php:\page\radio\contents\blog\view::str('1','{{get:id}}','tag')}}</p></div>
+    </div> -->
+    <div class="eyecatch">{{php:\page\radio\contents\blog\view::str('1','{{get:id}}','eyecatch')}}</div>
+    <div><!--<img src="contents/img/icon/calendar.svg">--><p class="date">{{php:\page\radio\contents\blog\view::str('1','{{get:id}}','date')}}</p></div>
+    <pre id="contents_blog_single" class="{{group_num}}">{{php:\page\radio\contents\blog\view::str('1','{{get:id}}','source')}}</pre>
+  </div>
+
+  <script>
+    new $$code_view({
+      selector : "#contents_blog_single pre"
+    });
+  </script>
+
+</body>
+</html>

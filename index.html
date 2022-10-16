@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{globals:page[title]}}</title>
+
+  <meta name="description" content="">
+	<meta name="author" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- <link rel="icon" href="page/{{globals:config[page]}}/img/share.svg" type="image/svg+xml"> -->
+
+  {{php:\lib\design\modules::load("default","	")}}
+
+  <!-- {!{php:\lib\analytics\google::tag("UA-165566916-2")}!} -->
+</head>
+<body>
+
+  <div id="menu-area">
+    <div class="menu header-menu">
+      <ul class="logo">
+        <li>
+          <a href="./">
+            <!-- <span class="img">
+              <img src="page/{{globals:config[page]}}/img/share.svg"></img>
+            </span> -->
+            <!-- <span class="txt">
+              <img src="page/{{globals:config[page]}}/img/instagram.png" style="width:auto;height:24px;">
+            </span> -->
+            <span class="txt">{{globals:page[name]}}</span>
+          </a>
+        </li>
+      </ul>
+      <div class="mobile-list-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="account">
+        {{php:\lib\menu\lists::view("header","li","ul","")}}
+      </ul>
+    </div>
+
+    
+
+  </div>
+
+	<div class="contents">
+    <div class="menu side-menu">
+      <ul>
+        {{php:\lib\menu\lists::view("left","li","ul","")}}
+      </ul>
+    </div>
+    
+    {{php:lib\html\page::contents("{{request:c}}","{{request:p}}")}}
+  </div>
+
+
+</body>
+</html>

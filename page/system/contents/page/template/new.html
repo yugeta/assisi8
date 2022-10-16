@@ -1,0 +1,27 @@
+<h2>page設定</h2>
+
+<div class="post-data">
+  <div>
+    <p>pageプロジェクト名 (page/***)</p>
+    <select name="database[page]">
+{{php:\lib\install\view::list_page_options()}}
+    </select>
+    <span class="annotation">半角英数字のみ</span>
+  </div>
+
+  
+
+  <!-- <div class="type-area" data-type="mysql" style="display:none;">
+    <p>mysql設定</p>
+    <input class="display-block" type="text" name="database[host]" value="{{post:database[host]}}" placeholder="Hostアドレス" >
+    <input class="display-block" type="text" name="database[port]" value="{{post:database[port]}}" placeholder="Port番号" >
+    <input class="display-block" type="text" name="database[user]" value="{{post:database[user]}}" placeholder="アクセスuser名" >
+    <input class="display-block" type="text" name="database[pass]" value="{{post:database[pass]}}" placeholder="アクセスパスワード" >
+  </div>
+
+  <div class="type-area" data-type="net" style="display:none;">
+    <p>net設定</p>
+    <input class="display-block" type="text" name="database[net]" value="{{post:database[net]}}" placeholder="サーバーアドレス" >
+  </div> -->
+
+</div>

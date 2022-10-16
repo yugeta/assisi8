@@ -1,0 +1,15 @@
+
+<script src="page/system/contents/master.bak/master.js?{{php:\mynt::currentTime()}}"></script>
+<script src="plugin/modal_js/src/modal.js?{{php:\mynt::currentTime()}}"></script>
+
+
+
+<h1>Master</h1>
+
+<select id="change_type">
+  <option value=""></option>
+{{php:\lib\data\database::getTables_option({{get:type}})}}
+</select>
+
+{{php:\plugin\post_matrix\php\table::view("001","{{get:type}}")}}
+

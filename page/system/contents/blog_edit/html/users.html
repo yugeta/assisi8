@@ -1,0 +1,17 @@
+<div class="control-group">
+  <label class="control-label" for="users"><i class='glyphicon glyphicon glyphicon-user'></i> User</label>
+  <div class="controls">
+    <select id="users" name="uid" class='form-control'>
+      {{php:\page\system\contents\users\users::getLists_option("{{get:category}}","{{get:id}}")}}
+    </select>
+  </div>
+</div>
+
+<script>
+  var sid = "{{session:id}}";
+  var uid = "{{php:\page\system\contents\blog\edit::getPageInfoString('uid','{{get:category}}','{{get:id}}')}}";
+  var elm = document.getElementById("users");
+  if(elm){
+    elm.value = uid ? uid : sid;
+  }
+</script>

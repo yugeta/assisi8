@@ -1,0 +1,112 @@
+*[data-hidden="1"]{
+  display:none !important;
+}
+
+
+.lists,
+.index-area{
+  width:90%;
+  margin:10px auto;
+  overflow:auto;
+}
+/* .index-area:empty{
+  display:none;
+} */
+.index-area > .label{
+  color:red;
+  font-weight:bold;
+}
+.index-area > .label:after{
+  content : " : ";
+  margin-right:10px;
+  color:red;
+  font-weight:bold;
+}
+.index-area .input .label{
+  margin-left:5px;
+}
+.index-area .input .label:after{
+  content : " : ";
+}
+.index-area select{
+  margin-right:5px;
+}
+.index-area select option:first-child{
+  background-color:red;
+  color:#ccc;
+}
+
+.lists .num{
+  width:60px;
+}
+
+.lists tbody tr:hover{
+  /* cursor:default; */
+}
+
+.lists thead tr th{
+  background-color:#EFE;
+}
+.lists thead tr.key th{
+  background-color:#EEE;
+  font-weight:normal;
+  font-size:10px;
+  padding:1px 0;
+}
+
+
+
+/* Buttons */
+.button-area{
+  text-align:center;
+}
+.button-area button{
+  display:inline-block;
+  /* min-width:200px; */
+  margin:10px;
+  padding:4px 10px;
+  text-align:center;
+  font-size:12px;
+  vertical-align:middle;
+}
+
+.button-area button.del{
+  background-color:red;
+  color:white;
+  border:0;
+}
+.button-area button.add{
+  background-color:#0095f6;
+  color:white;
+  border:0;
+}
+.button-area button.csv-import{
+  background-color:#f69500;
+  color:white;
+  border:0;
+}
+.button-area button.csv-download{
+  background-color:#f60095;
+  color:white;
+  border:0;
+}
+
+
+
+/* Select-master */
+.select-master-area{
+  display:block;
+  width:100%;
+  padding:20px 0;
+  text-align:center;
+}
+.select-master-area select[name="master"]{
+  min-width:200px;
+}
+
+
+/* No-data */
+.lists table tbody.no-data td{
+  height:80px;
+  text-align:center;
+}

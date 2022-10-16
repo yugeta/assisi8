@@ -1,0 +1,93 @@
+
+form[name="form1"] > h2{
+  font-size:16px;
+  border-bottom:1px solid #ccc;
+  margin-top:20px;
+  padding:10px;
+}
+
+.post-data{
+  padding-left:30px;
+}
+
+.post-data label{
+  font-size:14px;
+}
+
+.post-data p{
+  margin:4px;
+  font-size:10px;
+  color:#666;
+}
+.post-data > input{
+  /* display:block; */
+  margin:4px 10px;
+}
+.post-data input[type="text"],
+.post-data input[type="password"],
+.post-data select{
+  border:1px solid #ccc;
+  height:30px;
+  width:200px;
+  border-radius:4px;
+  padding:0 8px;
+  margin:4px 8px;
+}
+
+.post-button button{
+  min-width:100px;
+  height:30px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  background-color:#eee;
+  margin:20px 50px;
+  cursor:pointer;
+}
+.post-button button:hover{
+  opacity:0.5;
+}
+
+div.hr{
+  height:0px;
+  border-top:1px solid #ccc;
+  margin:20px 0;
+}
+
+.annotation{
+  color:red;
+  font-size:10px;
+}
+.display-block{
+  display:block;
+}
+
+@media (max-width: 400px) {
+  .annotation{
+    display:block;
+    margin:0 8px 10px;
+  }
+}
+
+
+.message-error{
+  border:1px solid red;
+  color:red;
+  margin:20px;
+  padding:10px;
+  
+}
+.message-error:empty{
+  display:none;
+}
+.message-success{
+  border:1px solid blue;
+  color:red;
+  margin:20px;
+  padding:10px;
+  
+}
+.message-success:empty{
+  display:none;
+}
+
+

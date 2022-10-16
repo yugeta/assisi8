@@ -1,0 +1,58 @@
+h2{
+  text-align:left;
+}
+
+.contents-area table{
+  border-collapse : collapse;
+}
+.contents-area table tr{
+  cursor:pointer;
+}
+.contents-area table tr:hover{
+  background-color:#EEF;
+}
+.contents-area table tr[data-hidden="1"]{
+  display:none;
+}
+
+.contents-area table th,
+.contents-area table td{
+  border:1px solid #ccc;
+  padding :4px;
+  
+}
+.contents-area table th{
+  background-color:#eee;
+  white-space:pre;
+}
+.contents-area table td{
+  /* white-space:pre-wrap;
+  word-break:break-all; */
+  white-space:pre;
+}
+.contents-area .menu-list{
+  overflow:auto;
+}
+
+.contents-area .menu-list .table-num{
+  min-width:30px;
+}
+
+
+.contents-area .type{
+  margin-bottom:8px;
+}
+.contents-area .type select{
+  min-width:100px;
+}
+
+
+
+/* Number */
+.contents-area .menu-list table tbody{
+  counter-reset:table-num;
+}
+.contents-area .menu-list table tbody tr .table-num:before{
+  counter-increment: table-num;
+  content: counter(table-num);
+}

@@ -1,0 +1,30 @@
+<h2>管理者ログイン設定</h2>
+<div class="post-data">
+  <!-- <label>管理者用ログイン ID & Password</label> -->
+  <!-- <div>
+    <p>管理者アカウント</p>
+    <input type="text" name="auth[login_id]" value="admin" readonly placeholder="id" style="background-color:#eee;" required>
+    <span class="annotation">※初期の管理者IDは変更できません。</span>
+  </div> -->
+  <div>
+    <p>メールアドレス</p>
+    <input type="text" name="auth[login_mail]" value="{{post:auth[login_mail]}}" placeholder="mail : user@example.com" autocomplete="new-password" required>
+    <span class="annotation">※メールアドレスを入力してください。</span>
+  </div>
+  <div>
+    <p>パスワード</p>
+    <input type="password" name="auth[login_pw]" value="{{post:auth[login_pw]}}" placeholder="password" autocomplete="new-password" required>
+    <span class="annotation">※管理パスワードは忘れないように注意してください。</span>
+  </div>
+  <div>
+    <p>パスワード確認</p>
+    <input type="password" name="auth[login_pw2]" value="{{post:auth[login_pw2]}}" placeholder="password" autocomplete="new-password" required>
+    <span class="annotation"></span>
+  </div>
+</div>
+
+<!-- {{php:\mynt\install\setup::viewInputs()}} -->
+
+    
+
+    

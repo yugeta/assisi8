@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="mynt/system/page/css/account_add.css?{{method:\mynt::currentTime()}}">
+
+<!-- &nbsp;
+<ol class="breadcrumb">
+  <li><a href="./">Home</a></li>
+  <li>アカウント登録</li>
+</ol>
+&nbsp; -->
+
+<div class="error-message">{{request:errorMessage}}</div>
+&nbsp;
+
+<h1 class="panel-heading">アカウント登録</h1>
+<div class="panel-body table-responsive">
+	<form name='form1' method='post' class="form-horizontal" data-action="{{php:\mynt\lib\url::getUrl()}}">
+		<input type="hidden" name="php" value="\mynt\system\users::request_add()">
+		<input type="hidden" name="redirect" value="system.php?p=users">
+		<input type="hidden" name="account[entry]" value="{{post:account/entry}}">
+		<input type="hidden" name="account[id]" value="{{post:account/id}}">
+
+		<div class="form-horizontal">
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[mail]">メールアドレス</label>
+				<div class="col-sm-9">
+					<input type='text' id="account[mail]" name='account[mail]' value='{{post:account/mail}}' class='form-control' placeholder='メールアドレスを入力してください' autocomplete="off"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[password]">パスワード</label>
+				<div class="col-sm-9">
+					<input type='password' id="account[password]" name='account[password]' value='{{post:account/password}}' class='form-control' placeholder='パスワードを入力してください。' autocomplete="new-password"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[password2]">パスワード確認</label>
+				<div class="col-sm-9">
+					<input type='password' id="account[password2]" name='account[password2]' value='{{post:account/password2}}' class='form-control' placeholder='上記と同じパスワードを入力してください。' autocomplete="off"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="account[auth]">権限</label>
+				<div class="col-sm-9">
+					<select id="account[auth]" name='account[auth]' class='form-control'>
+						{{php:\mynt\system\users::viewAuth_options()}}
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="property[name]">名前</label>
+				<div class="col-sm-9">
+					<input type='text' id="property[name]" name='property[name]' value='{{post:property/name}}' class='form-control' placeholder='お名前を入力してください。' autocomplete="off"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="property[memo]">コメント</label>
+				<div class="col-sm-9">
+					<textarea type='password' id="property[memo]" name='property[memo]' class='form-control' placeholder='コメントを入力してください。' autocomplete="off">{{post:data/memo}}</textarea>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for=""></label>
+				<div class="col-sm-9">
+					<button type="submit" class='btn btn-default'>確認</button>
+					<button type="button" class="btn btn-default" onclick="javascript:location.href='?p=users'">キャンセル</button>
+				</div>
+			</div>
+
+		</div>
+	</form>
+</div>

@@ -1,0 +1,4 @@
+.account-lists > table > tbody > tr:hover{
+  background-color:#FEE;
+  cursor:pointer;
+}

@@ -1,0 +1,20 @@
+<!-- <link rel="stylesheet" href="page/system/contents/database/common.css?{{method:\mynt::currentTime()}}" /> -->
+<link rel="stylesheet" href="page/system/contents/design/common.css?{{method:\mynt::currentTime()}}">
+<script src="page/system/contents/design/common.js?{{method:\mynt::currentTime()}}"></script>
+<script src=""></script>
+
+<div class="message-error">{{post:message_error}}</div>
+<div class="message-success">{{post:message_success}}</div>
+
+
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\page\system\contents\design\common::save()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+
+    <h2>Design</h2>
+
+    <ul class="design-lists">
+{{php:\page\system\contents\design\common::viewLists_li()}}
+    </ul>
+
+</form>

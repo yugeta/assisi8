@@ -1,0 +1,9 @@
+<div class="control-group" id="fileNameArea">
+  <label class="control-label" for="group"><i class='glyphicon glyphicon-menu-hamburger'></i> Category</label>
+  <div class="controls">
+    <select id="group" name="group" class="form-control">
+      <option value=""></option>
+      {{METHOD:\MYNT\SYSTEM\BLOG_EDIT::getGroupListsOptions("{{get:file}}")}}
+    </select>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="label">関連記事</div>
+<div class="content">
+  <ul class="gadget-relations">
+
+  </ul>
+</div>
+<script>
+  let elm  = document.querySelector(".gadget-relations");
+  let elms2 = elm.querySelectorAll(":scope > *");
+  if(!elms2 || !elms2.length){
+    let parent = new $$lib().upperSelector(elm , ".gadget");
+    if(parent){
+      parent.style.setProperty("display" , "none" , "");
+    }
+  }
+</script>

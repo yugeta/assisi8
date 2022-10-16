@@ -1,0 +1,97 @@
+.files{
+  min-height:120px;
+  text-align:left;
+}
+
+.files > *{
+  position:relative;
+  display:inline-block;
+  width:120px;
+  height:120px;
+  margin:4px;
+  border:1px solid #CCF;
+  cursor:pointer;
+  background-color:white;
+  vertical-align:middle;
+  z-index:100;
+}
+.files > * *{
+  pointer-events:none;
+}
+.files > *:hover{
+  transform-origin:center;
+  transform:scale(1.2);
+  box-shadow:2px 2px 8px rgba(0,0,0,0.3);
+  z-index:1000;
+}
+
+.files .img{
+  object-fit:cover;
+}
+
+.files .file{
+  /* line-height:120px; */
+  text-align:center;
+  font-weight:bold;
+  font-size:14px;
+  color:black;
+  white-space:pre-wrap;
+  word-break:break-all;
+  /* position:relative; */
+}
+.files .file .name{
+  position:absolute;
+  display:inline-block;
+  width:100%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:0 5px;
+  font-size:12px;
+}
+.files .file .ext{
+  position:absolute;
+  display:inline-block;
+  bottom:0;
+  right:0;
+  font-size:12px;
+  padding:2px 5px;
+  background-color:#CCF;
+  color:white;
+}
+.files[data-loading="1"]:after{
+  content:url("../img/loading2.svg");
+  display:inline-block;
+  width:120px;
+  height:120px;
+  border:1px solid #ccc;
+  background-color:#eee;
+  margin:4px;
+  padding:40px;
+  vertical-align:middle;
+}
+.fileUpload-base{
+  z-index:10000;
+}
+
+.modal-message{
+  height:200px;
+}
+.modal-message-contents{
+  overflow-y:auto;
+  max-height:300px;
+}
+.modal-message-contents img{
+  max-width:50%;
+  max-height:100%;
+  border:1px solid #CCF;
+}
+
+.modal-area img,
+.modal-area video{
+  max-width:100%;
+}
+.modal-area .path{
+  margin-bottom:30px;
+}
+

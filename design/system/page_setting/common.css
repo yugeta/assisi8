@@ -1,0 +1,32 @@
+textarea.database{
+  display:block;
+  width:90%;
+  margin:10px auto;
+  min-height:240px;
+}
+
+.links ul,
+.links li{
+  list-style : none;
+  margin:0;
+  padding:0;
+}
+.links ul{
+  display:flex;
+}
+.links li{
+  margin:4px;
+  padding:4px;
+  border:1px solid #ccc;
+  min-width:70px;
+  text-align:center;
+}
+.links li:not([data-active="1"]){
+  cursor:pointer;
+}
+.links li:hover{
+  background-color:#FEE;
+}
+.links li[data-active="1"]{
+  background-color:#EEF;
+}

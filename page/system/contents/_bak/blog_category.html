@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="system/css/group.css?<<method:\MYNT::currentTime()>>" />
+<h1>Category</h1>
+
+<form method="POST">
+  <!-- <input type='hidden' name='method' value='\MYNT\SYSTEM\GROUP/addGroupList' /> -->
+  <input type='hidden' name='method' value='\MYNT\SYSTEM\GROUP/setUpdate' />
+  <input type="hidden" name="p" value="<<REQUEST:p>>" />
+  <!-- <input type="hidden" name="target" value="plugin" /> -->
+  <!-- <input type="hidden" name="plugin[cache]" value="" /> -->
+
+  <div class='container'>
+    <div class="row">
+        <table class="groups" id="groups">
+          <thead>
+            <tr class="header"><th>#</th><th>Name</th><th>Count</th><th>Remove</th></tr>
+          </thead>
+          <tbody>
+            <!-- <tr class="data"><th>#</th><th><input type="" name="" value="Name"></th><th>Count</th><th>Remove</th></tr> -->
+<<method:\MYNT\SYSTEM\GROUP::viewGroupTableRows()>>
+          </tbody>
+          <tfoot>
+            <tr class="add">
+              <th>Add</th>
+              <td colspan="3" style="text-align:center;">
+                <input id="addButton" type='button' value='+' class='btn btn-default' />
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+    </div>
+  </div>
+
+
+  <hr>
+  <div class='container'>
+    <div class="row control-group">
+      <input type='submit' value='Update' class='btn btn-default' />
+    </div>
+  </div>
+</form>
+
+<script src="system/js/group.js?<<GLOBALS:config/default/version>>"></script>

@@ -1,0 +1,56 @@
+{{php:\lib\design\modules::load("login","	")}}
+
+
+
+<div class="account-entry">
+
+  <div class="breadcrumbs">
+    <a href="./">戻る</a>
+  </div>
+
+  <div class="progress">
+    <ul>
+      <li class="active">メールアドレス<br>の登録</li>
+      <li>認証コード<br>の確認</li>
+      <li>パスワード<br>の登録</li>
+    </ul>
+  </div>
+
+  <div class="error">{{post:error}}</div>
+
+
+  <form name="login" method="post">
+    <input type="hidden" name="php" value="\page\system\contents\account\entry::post()">
+    <!-- <input type="hidden" name="redirect" value="{{php:\lib\common\url::getUrl()}}"> -->
+    <!-- <input type="hidden" name="redirect" value="{{php:\lib\common\url::getUrl()}}?p=system&f=plane&c=account/mail_auth"> -->
+
+    <!-- <input type="hidden" name="mail_from" value="{{globals:page[mail]}}"> -->
+    <!-- <input type="hidden" name="mail_from" value="master@localhost"> -->
+    <input type="hidden" name="mail_from" value="{{globals:page[mail]}}">
+
+    <div class="login">
+
+      <div class="input-area">
+
+        <div class="login-logo">
+          <h2>新規アカウント登録</h2>
+        </div>
+
+        <div class="caution" style="margin:40px auto;">
+          メールアドレスを登録すると、登録完了する認証コードがメールで送信されます。<br>
+          メールに書かれている認証コードを入力すると、登録完了です。
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-addon">メール</span>
+          <input class="form-control" type="text" name="mail" value="{{request:mail}}" autocomplete="new-password">
+        </div>
+
+        <div class="login-submit">
+          <button type="submit" class="btn btn-primary">メール送信</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

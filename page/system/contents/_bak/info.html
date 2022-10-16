@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="<<GLOBALS:servicePath>>/css/site/info.css?<<METHOD:\MYNT::currentTime()>>">
+<script src="<<GLOBALS:servicePath>>/js/site/info.js?<<METHOD:\MYNT::currentTime()>>"></script>
+
+<h1>Infomation</h1>
+
+<!-- <form method="POST" class="form-horizontal" enctype="multipart/form-data"> -->
+<form method="POST" class="form-horizontal">
+  <input type='hidden' name='method_return' value='\MYNT\SYSTEM\info::postData' />
+  <input type="hidden" name="redirect" value="<<METHOD:\MYNT\LIB\URL::getUrl()>>?p=<<REQUEST:p>>" />
+  <input type="hidden" name="id" value="<<REQUEST:id>>" />
+
+  <div class="form-group">
+    <label class="control-label col-sm-4 text-right" for="data[date]">日付</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="data[date]" type="date" name="data[date]" placeholder="" value="<<METHOD:\MYNT\SYSTEM\info::getValue('date')>>" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4 text-right" for="data[title]">タイトル</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="data[title]" type="text" name="data[title]" placeholder="" value="<<METHOD:\MYNT\SYSTEM\info::getValue('title')>>" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4 text-right" for="data[comment]">本文</label>
+    <div class="col-sm-8">
+      <textarea class="form-control" id="data[comment]" name="data[comment]" placeholder=""><<METHOD:\MYNT\SYSTEM\info::getValue('comment')>></textarea>
+    </div>
+  </div>
+  <!-- <div class="form-group">
+    <label class="control-label col-sm-4 text-right" for="data[file]">ファイル</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="data[file]" type="file" name="data[file]" placeholder="" />
+    </div>
+  </div> -->
+
+  
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8 text-right"></div>
+    <div class="col-sm-8">
+      <button type="submit" name="data[submit]" value="post"   class="btn btn-default">送信</button>
+      <button type="submit" name="data[remove]" value="remove" class="btn btn-default" data-view="<<METHOD:\MYNT\SYSTEM\info::flgQuery_Id('<<REQUEST:id>>')>>">削除</button>
+    </div>
+  </div>
+
+</form>
+
+<hr>
+
+<ul id="infoLists">
+<<METHOD:\MYNT\SYSTEM\info::viewLists_li()>>
+</ul>

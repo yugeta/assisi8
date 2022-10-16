@@ -1,0 +1,53 @@
+
+#infoLists,
+#infoLists > li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#infoLists{
+  margin:8px;
+}
+#infoLists > li{
+  border-left:6px solid #bbb;
+  padding:8px 12px;
+  border-bottom:1px solid rgb(230,230,230);
+}
+#infoLists > li:hover{
+  background-color:rgb(240,240,240);
+}
+#infoLists > li[data-active='1']{
+  /* background-color:#fee; */
+  border-left:6px solid red;
+}
+
+#infoLists > li .file > span{
+  font-size:12px;
+}
+#infoLists > li .file img{
+  width:20px;
+  margin-left:10px;
+}
+#infoLists > li .file a:hover{
+  opacity:0.5;
+}
+#infoLists > li .comment pre{
+  overflow:hidden;
+  height:100px;
+  cursor:pointer;
+
+}
+#infoLists > li .comment pre[data-expand="1"]{
+  height:auto;
+}
+#infoLists > li .comment img{
+  max-width:90%;
+  max-height:200px;
+}
+
+button[name="data[remove]"]{
+  display:none;
+}
+button[name='data[remove]'][data-view='1']{
+  display:inline-block;
+}

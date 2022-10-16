@@ -1,0 +1,46 @@
+{{php:\lib\design\modules::load("login","	")}}
+
+<div class="breadcrumbs">
+  <a href="./">戻る</a>
+</div>
+  
+
+<form name="login" method="post">
+  <input type="hidden" name="php" value="\lib\auth\login::login()">
+  <input type="hidden" name="redirect[success]" value="{{php:\lib\url\common::getUrl()}}">
+  <input type="hidden" name="redirect[error]" value="contents.php?p=login">
+  <div class="login">
+
+    <div class="error">{{post:error}}</div>
+
+    <div class="input-area">
+      <div class="login-logo">
+        <p style="font-size:32px;font-weight:bold;">{{globals:page[name]}}</p>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">メール</span>
+        <input class="form-control" type="text" name="mail" value="{{post:mail}}" autocomplete="new-password">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">パスワード</span>
+        <input class="form-control" type="password" name="pass" value="{{post:pass}}" autocomplete="new-password">
+      </div>
+      <div class="login-submit">
+        <button type="submit" class="btn btn-primary arrow login findContent">ログイン</button>
+      </div>
+    </div>
+
+    <!-- <div class="user_add">
+      <a href="{{php:\mynt\plugin\system\url::getUrl()}}?p=account_password_reset">パスワードを忘れた場合</a>
+    </div> -->
+
+
+    <div class="user_add">
+      <a href="{{php:\lib\url::getUrl()}}?p=system&f=plane&c=account/mail_entry">アカウント新規登録</a>
+    </div>
+
+    <div class="user_add">
+      <a href="{{php:\mynt\plugin\system\url::getDir()}}system.php">管理画面</a>
+    </div>
+  </div>
+</form>

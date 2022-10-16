@@ -1,0 +1,44 @@
+{
+  "info" : {
+    "name" : "Menu設定",
+    "type" : "add"
+  },
+  "columns" : {
+    "id" : {
+      "type"   : "INT",
+      "length" : 10,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+    "type" :{
+      "type"   : "VARCHAR",
+      "length" : 20,
+      "index" : ""
+    },
+    "name" : {
+      "type"   : "VARCHAR",
+      "length" : 50,
+      "option" : ""
+    },
+    "auth" : {
+      "type"   : "INT",
+      "length" : 11,
+      "option" : ""
+    },
+    "link" : {
+      "type"   : "VARCHAR",
+      "length" : 200,
+      "option" : ""
+    },
+    "html" : {
+      "type"   : "VARCHAR",
+      "length" : 200,
+      "option" : ""
+    },
+
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    }
+  }
+}

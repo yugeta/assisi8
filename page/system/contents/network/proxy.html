@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="page/system/contents/network/proxy.css">
+<script src="page/system/contents/network/proxy.js"></script>
+<script src="plugin/modal_js/src/modal.js"></script>
+
+
+<h1>Proxy Checker</h1>
+
+<div class="control">
+<label><input type="checkbox" class="list-view-mode">停止リストの表示</label>
+<label><input type="checkbox" class="re-check">再チェック</label>
+</div>
+
+<div class="lists">
+  <table data-view-mode="short">
+    <thead>
+      <th>#</th>
+      <th>server</th>
+      <th>check</th>
+      <th>memo</th>
+    </thead>
+    <tbody>
+{{php:\page\system\contents\network\proxy::lists()}}
+    </tbody>
+  </table>
+</div>
+
+<div class="add-area">
+  <button class="add">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+      <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 "/>
+    </svg>
+    <span>ログインアカウントを追加</span>
+  </button>
+</div>

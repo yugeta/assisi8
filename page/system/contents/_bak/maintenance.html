@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="mynt/{{php:\mynt::getBasename()}}/page/css/{{request:p}}.css">
+
+<div class="maintenance">
+  <h1>メンテナンス設定</h1>
+
+
+  <p><label><input type="radio" name="switch" value="" checked> 通常モード</label></p>
+  <div>通常運用状態です。</div>
+
+  <p><label><input type="radio" name="switch" value="1"> 強制メンテナンスモード</label></p>
+  <div>メンテナンスモードを行います。</div>
+  
+
+  <p><label><input type="radio" name="switch" value=""> スケジュールモード</label></p>
+  <div>下記スケジュールにて、メンテナンスモードを行います。</div>
+  <div>
+    Start : <input type="date" name="start" value="">
+    〜 End : <input type="date" name="end" value="">
+  </div>
+
+</div>

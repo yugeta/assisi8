@@ -1,0 +1,10 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<meta name="google-site-verification" content="{{owner-key}}" />
+<script async src="https://www.googletagmanager.com/gtag/js?id={{tracking-code}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{tracking-code}}');
+</script>

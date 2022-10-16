@@ -1,0 +1,54 @@
+{
+  "info" : {
+    "name" : "database.json",
+    "type" : "static",
+    "mode" : "system"
+  },
+  "columns" : {
+    "type" : {
+      "type"   : "VARCHAR",
+      "length" : 20,
+      "option" : ""
+    },
+    "database" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+
+    "session_path" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+
+
+    "host" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+    "port" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+    "user" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+    "pass" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+
+
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    }
+  }
+}

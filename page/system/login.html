@@ -1,0 +1,74 @@
+{{php:\lib\auth\session::check_auth("?p=system","")}}
+<!doctype html>
+<html>
+<head>
+	<title>MYNTstudio 管理画面 ログイン</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/svg+xml" href="page/system/img/favicon.svg" sizes="96x96">
+	<!-- <link rel="stylesheet" href="page/system/css/common.css?{{method:\mynt::currentTime()}}">
+	<link rel="stylesheet" href="page/system/css/unlogin.css?{{method:\mynt::currentTime()}}">
+	<script src="page/system/js/ajax.js?{{method:\mynt::currentTime()}}"></script>
+	<script src="page/system/js/svgControl.js?{{method:\mynt::currentTime()}}"></script> -->
+
+{{php:\lib\design\modules::load("head","	")}}
+</head>
+<body>
+	{{php:\lib\design\modules::load("body_start")}}
+<h1 class="text-center">SYSTEM Administrator</h1>
+
+<form name="login" method="post">
+	<input type="hidden" name="php" value="\lib\auth\login::login()">
+	<input type="hidden" name="restrict_auth" value="4">
+
+	<input type="hidden" name="redirect[ok]" value="p=system">
+	<input type="hidden" name="redirect[ng]" value="p=system&f=login">
+
+
+	<div class="login">
+
+		{{if:isset($_REQUEST["message"]) && $_REQUEST["message"]!==""}}
+			<div class="error">
+				<div class="error-box">
+					Login error !!<br>
+					{{request:message}}
+				</div>
+			</div>
+		{{/if}}
+
+		<div class="input-area">
+			<div class="login-logo">
+				<svg class="login-logo" src="page/system/img/icon/block.svg"></svg>
+			</div>
+
+			<div class="input-group">
+				<span class="input-group-addon">メール</span>
+				<input class="form-control" type="text" name="mail" value="{{post:mail}}" autocomplete="off">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">パスワード</span>
+				<input class="form-control" type="password" name="pass" value="{{post:pass}}" autocomplete="off">
+			</div>
+			<div class="login-submit">
+				<button type="submit" class="btn btn-primary">ログイン</button>
+			</div>
+		</div>
+
+		<!-- <div class="user_add">
+			<a href="<<METHOD:MYNT_URL::getDir()>>?p=account_add&type=pass_reset">パスワードを忘れた場合</a>
+		</div> -->
+
+
+		<!-- <div class="user_add">
+			<a href="<<METHOD:MYNT_URL::getDir()>>?p=account_add">アカウント新規登録</a>
+		</div> -->
+
+		<!-- <div class="user_add">
+			<a href="{{method:\mynt\lib\url::getDir()}}./">サービスページ</a>
+		</div> -->
+
+	</div>
+</form>
+
+	{{php:\lib\design\modules::load("body_end")}}
+</body>
+</html>

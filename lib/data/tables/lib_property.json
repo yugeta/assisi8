@@ -1,0 +1,29 @@
+{
+  "info" : {
+    "name" : "アカウント詳細",
+    "type" : "add",
+    "mode" : "system"
+  },
+  "columns" : {
+    "id" : {
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "PRIMARY KEY"
+    },
+    "name" : {
+      "type"   : "VARCHAR",
+      "length" : 100,
+      "option" : ""
+    },
+    "memo" : {
+      "type"   : "TEXT",
+      "length" : 0,
+      "option" : ""
+    },
+    "entry" : {
+      "type"   : "VARCHAR",
+      "length" : 14,
+      "option" : ""
+    }
+  }
+}

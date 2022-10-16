@@ -1,0 +1,29 @@
+<h2>database設定</h2>
+
+<div class="post-data">
+  <div>
+    <p>データ保存形式</p>
+    <select type="text" name="database[type]">
+      {{php:\lib\install\value::setOptions_type("type")}}
+    </select>
+  </div>
+
+  <div>
+    <p>database名 (data/***)</p>
+    <input type="text" name="database[database]" value="myntpage" required>
+    <span class="annotation">半角英数字のみ</span>
+  </div>
+
+  <div>
+    <p>Session名</p>
+    <input type="text" name="database[session]" value="myntpage" required>
+    <span class="annotation">半角英数字のみ</span>
+  </div>
+
+  <div>
+    <p>System Version</p>
+    <input type="text" name="database[version]" value="{{php:\lib\install\value::setValue('version','myntpage')}}" placeholder="0.0.1" required>
+    <span class="annotation">ex) 0.0.1</span>
+  </div>
+
+</div>

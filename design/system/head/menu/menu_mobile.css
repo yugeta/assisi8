@@ -1,0 +1,121 @@
+@media (max-width: 500px) {
+  /* << menu-common */
+  .menu img,
+  .menu svg{
+    width:20px;
+    height:20px;
+    fill : #666;
+  }
+  .menu *{
+    font-size:13px;
+  }
+  .menu .logo{
+    width:100%;
+    height:60px;
+    background-color : #666;
+    text-align:center;
+    line-height:60px;
+    position:relative;
+  }
+  .menu .logo li{
+    height:100% !important;
+  }
+  .menu > ul.logo > li > a,
+  .menu[data-view="1"] > ul.logo > li > a,
+  .menu[data-view="0"] > ul.logo > li > a{
+    display:block;
+    width:100%;
+    height:60px !important;
+    animation-name:none;
+  }
+  .menu .logo span{
+    display:inline-block;
+    height:100%;
+  }
+  .menu .logo img,
+  .menu .logo svg{
+    position:absolute;
+    left:10px;
+    top : calc(50% - 15px);
+    width:30px;
+    height:30px;
+    vertical-align:middle;
+    margin-right:10px;
+  }
+  .menu .logo .txt{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    line-height:60px;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+  }
+  .menu a{
+    height : 40px;
+    line-height:40px;
+  }
+
+  .menu .mobile-list-button{
+    position:absolute;
+    display:block;
+    right:10px;
+    top : 15px;
+    width:30px;
+    height:30px;
+    border:1px solid white;
+    border-radius:4px;
+  }
+  .menu .mobile-list-button > span{
+    display:block;
+    width:calc(100% - 8px);
+    height:2px;
+    background-color:white;
+    margin:5px 4px;
+  }
+
+  .menu li > a{
+    display:none;
+    overflow:hidden;
+  }
+  .menu[data-view="1"] ul > li > a{
+    display:block;
+    /* height : 40px; */
+    animation: submenu-header-small-open 0.3s linear forwards;
+    line-height:40px;
+    border-bottom:1px solid #ccc;
+    width:100%;
+    padding:0 10px;
+  }
+  .menu[data-view="0"] ul > li > a{
+    animation: submenu-header-small-close 0.3s linear forwards;
+  }
+
+  .contents{
+    margin : 0 10px;
+  }
+
+
+
+  /* << Animation -- */
+  @keyframes submenu-header-small-open{
+    0%{
+      height : 0;
+    }
+    100%{
+      height : 40px;
+    }
+  }
+  @keyframes submenu-header-small-close{
+    0%{
+      height : 40px;
+    }
+    100%{
+      height : 0;
+    }
+  }
+  /* -- Animation >> */
+}
+
+

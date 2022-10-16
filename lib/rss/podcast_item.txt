@@ -1,0 +1,15 @@
+    <item>
+      <itunes:episode>{{episode}}</itunes:episode>
+      <title>{{program_title}}</title>
+      <link>{{program_mp3}}</link>
+      <enclosure url="{{program_mp3}}" length="{{length}}" type="{{enc_type}}" />
+      <itunes:duration>{{duration}}</itunes:duration>
+      <pubDate>{{program_date}}</pubDate>
+      <itunes:author>{{author}}</itunes:author>
+      <itunes:image href="{{banner}}"/>
+      <description>{{program_description}}</description>
+      <guid>{{program_mp3}}</guid>
+      <itunes:explicit>{{explicit}}</itunes:explicit>
+      <itunes:summary>{{program_description}}</itunes:summary>
+      <episode_url>{{episode_url}}</episode_url>
+    </item>

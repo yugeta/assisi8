@@ -1,0 +1,29 @@
+{{php:\lib\design\modules::load("page","	")}}
+
+<h1>Page名</h1>
+
+<div class="success">{{post:success}}</div>
+<div class="error">{{post:error}}</div>
+
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\page\system\contents\page\common::post()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="4">
+
+
+  <div class="post-data">
+    <div>
+      <!-- <p>名称</p> -->
+      <input type="text" name="page[name]" value="{{php:\page\system\contents\page\common::getValue('name')}}" required>
+      <span class="annotation">半角英数字のみ</span>
+    </div>
+
+  </div>
+
+
+
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">送信</button>
+  </div>
+</form>

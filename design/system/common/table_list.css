@@ -1,0 +1,43 @@
+.lists{
+  margin-bottom:40px;
+}
+.lists > table{
+  width:100%;
+  border-collapse:collapse;
+}
+.lists > table *{
+  font-size:12px;
+  color:#666;
+}
+.lists > table > tbody > tr{
+  height:30px;
+  cursor:pointer;
+}
+.lists > table > tbody > tr:hover{
+  background-color:#FEE;
+}
+.lists > table th,
+.lists > table td{
+  border:1px solid #ccc;
+  padding:4px;
+  min-width:100px;
+  white-space:pre-wrap;
+}
+.lists > table th{
+  background-color:rgba(0,0,0,0.1);
+}
+.lists > table .num{
+  width:50px;
+  min-width:50px;
+  text-align:center;
+}
+
+
+/* #num */
+.lists tbody{
+  counter-reset: num;
+}
+.lists tbody .num:before{
+  counter-increment: num;
+  content: counter(num);
+}

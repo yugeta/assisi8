@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>myntstudio初期設定</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" href="page/system/contents/install/common.css?{{method:\mynt::currentTime()}}">
+  <script src="page/system/contents/install/common.js?{{method:\mynt::currentTime()}}"></script>
+</head>
+<body>
+	<!-- {!{php:\lib\html\view::page("{{get:p}}","install")}!} -->
+	<div class="message-error">{{post:message_error}}</div>
+
+	<h1>MyntPage初期設定</h1>
+
+	<div class="contents">
+		<form name="form1" method="post">
+			<!-- <input type="hidden" name="mode" value="install_post"> -->
+			<input type="hidden" name="php" value="\lib\install\setup::save_all()" />
+			<input type="hidden" name="exit" value="true" />
+			<input type="hidden" name="err_p" value="install">
+			<input type="hidden" name="err_f" value="index">
+			<input type="hidden" name="redirect" value="?p=system">
+			<input type="hidden" name="auth[auth]" value="4">
+{{file:page/system/contents/install/html/account.html}}
+{{file:page/system/contents/install/html/database.html}}
+			<div class="hr">
+			<div class="post-button">
+				<button type="submit">送信</button>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

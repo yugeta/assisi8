@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="page/system/contents/blog/modules/lists.css?{{php:\mynt::currentTime()}}">
+<link rel="stylesheet" href="page/system/contents/blog/modules/pagenation.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/blog/modules/lists.js?{{php:\mynt::currentTime()}}"></script>
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<div class='base-default base-color-green'>
+				<h1><i class='glyphicon glyphicon-list'></i> Blog Lists</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="category-select-area">
+	<select name="category">{{php:\page\system\contents\blog\category::getTags_option("{{get:category}}")}}</select>
+</div>
+
+
+<div class="table-scroll">
+	<ul class="nav nav-tabs status-lists">
+		<li class="{{if:'{{request:status}}'===''}}active{{/if}}">
+			<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="{{php:\lib\url\common::getUrl()}}?p={{get:p}}&c={{get:c}}&category={{get:category}}">
+				ALL ({{php:\page\system\contents\blog\common::getCount("{{get:type}}","{{get:category}}")}})
+			</a>
+		</li>
+
+{{php:\page\system\contents\blog\status::getPageCategoryLists_li("status","{{get:category}}")}}
+
+		<li class="{{if:'{{get:status}}'==='unregist'}}active{{/if}}">
+			<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="{{php:\lib\url\common::getUrl()}}?p={{get:p}}&c={{get:c}}&status=unregist&category={{get:category}}">
+				未登録 ({{php:\page\system\contents\blog\common::getCount("unregist")}})
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+<div class="table-scroll">
+	<table class="table blog-lists">
+		<thead class="thead-inverse">
+			<tr>
+				<th>#</th>
+				<th>イメージ</th>
+				<th>グループ</th>
+				<th>タイトル</th>
+				<th>ステータス</th>
+				<th>公開</th>
+			</tr>
+		</thead>
+		<tbody>
+{{php:\page\system\contents\blog\lists::viewPageLists_tr({{get:status}},{{get:page}},{{get:category}})}}
+		</tbody>
+	</table>
+</div>
+
+
+
+<div class=''>
+	<p><a href="?p={{get:p}}&c=blog_edit/index&status={{get:status}}&category={{get:category}}" class="btn btn-primary btn-lg add" role="button">+ Add Blog</a></p>
+</div>
+
+
+<div class="table-scroll">
+	<nav style="display:block;">
+		<ul class="pagenation">
+			<li>
+				<a href="{{php:\page\system\contents\blog\pagenation::getUrl_start({{get:status}},{{get:page}})}}" aria-label="前のページへ">
+					<span aria-hidden="true">«</span>
+				</a>
+			</li>
+{{php:\page\system\contents\blog\pagenation::view_li({{get:status}},{{get:page}},{{get:category}})}}
+			<li>
+				<a href="{{php:\page\system\contents\blog\pagenation::getUrl_end({{get:status}},{{get:page}})}}" aria-label="次のページへ">
+					<span aria-hidden="true">»</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

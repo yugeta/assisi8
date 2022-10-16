@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="<<GLOBALS:servicePath>>/css/system/account_add.css?<<GLOBALS:gonfig/default/version>>">
+
+<!-- &nbsp;
+<ol class="breadcrumb">
+  <li><a href="./">Home</a></li>
+  <li><a href="system.php?p=userLists">アカウント一覧</a></li>
+  <li>アカウント編集</li>
+</ol>
+&nbsp; -->
+
+<div class="error-message"><<REQUEST:errorMessage>></div>
+&nbsp;
+
+<!-- <div class="panel panel-default"> -->
+  <div class="panel-heading">アカウント編集</div>
+	<div class="panel-body table-responsive">
+		<form name='form1' method='post' class="form-horizontal" data-action="<<METHOD:\MYNT\LIB\URL::getUrl()>>">
+			<input type="hidden" name="method" value="\MYNT\LIB\ACCOUNT::request_edit">
+			<input type="hidden" name="redirect" value="system.php?p=system/account_edit">
+			<input type="hidden" name="data[entry]" value="<<METHOD:\MYNT\LIB\ACCOUNT::getValue_login("<<SESSION:id>>","entry")>>">
+			<input type="hidden" name="data[id]" value="<<SESSION:id>>">
+
+			<div class="form-horizontal">
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="data[mail]">メールアドレス</label>
+					<div class="col-sm-9">
+						<input type='text' id="data[mail]" name='data[mail]' value='<<METHOD:\MYNT\LIB\ACCOUNT::getValue_login("<<SESSION:id>>","mail")>>' class='form-control' placeholder='メールアドレスを入力してください' autocomplete="off"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="data[password]">パスワード</label>
+					<div class="col-sm-9">
+						<input type='password' id="data[password]" name='data[password]' value='' class='form-control' placeholder='パスワードを変更する場合に入力してください。' autocomplete="new-password"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="data[password2]">パスワード確認</label>
+					<div class="col-sm-9">
+						<input type='password' id="data[password2]" name='data[password2]' value='' class='form-control' placeholder='変更の際に上記と同じパスワードを入力してください。' autocomplete="new-password"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="data[auth]">権限</label>
+					<div class="col-sm-9">
+						<select id="data[auth]" name='data[auth]' class='form-control'>
+							<<METHOD:\MYNT\LIB\ACCOUNT::viewAuth_options_select(<<SESSION:id>>)>>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="data[name]">名前</label>
+					<div class="col-sm-9">
+						<input type='text' id="data[name]" name='data[name]' value='<<METHOD:\MYNT\LIB\ACCOUNT::getValue_account("<<SESSION:id>>","name")>>' class='form-control' placeholder='お名前を入力してください。' />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="data[comment]">コメント</label>
+					<div class="col-sm-9">
+						<textarea type='password' id="data[comment]" name='data[comment]' class='form-control' placeholder='コメントを入力してください。' /><<METHOD:\MYNT\LIB\ACCOUNT::getValue_account("<<SESSION:id>>","comment")>></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for=""></label>
+					<div class="col-sm-9">
+						<button type="submit" class='btn btn-default'>更新</button>
+						<!-- <button type="button" class="btn btn-default" onclick="javascript:location.href='system.php?p=userLists'">キャンセル</button> -->
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+<!-- </div> -->

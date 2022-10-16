@@ -1,0 +1,56 @@
+{{php:\lib\design\modules::load("account","	")}}
+
+<div class="breadcrumbs">
+<a href="./">戻る</a>
+</div>
+
+<div class="error">{{post:error}}</div>
+<div class="success">{{post:success}}</div>
+
+
+<form name="login" method="post">
+  <input type="hidden" name="php" value="\page\system\contents\account\edit::post()">
+  <!-- <input type="hidden" name="redirect" value="{{php:\lib\common\url::getUrl()}}"> -->
+  <input type="hidden" name="account_id" value="{{session:id}}">
+
+  <input type="hidden" name="mail_from" value="">
+
+  <div class="login">
+
+    <div class="input-area">
+
+      <div class="login-logo">
+        <h2>アカウント編集</h2>
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon">メール</span>
+        <input class="form-control" type="text" name="mail" value="{{php:\page\system\contents\account\data::getAccount({{session:id}},'mail')}}" autocomplete="new-password">
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon">パスワード</span>
+        <input class="form-control" type="password" name="pass" value="{{post:pass}}" autocomplete="new-password" placeholder="変更する場合に入力してください。">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">パスワード確認</span>
+        <input class="form-control" type="password" name="pass2" value="{{post:pass2}}" autocomplete="new-password" placeholder="">
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon">名前</span>
+        <input class="form-control" type="text" name="name" value="{{php:\page\system\contents\account\data::getAccount({{session:id}},'name')}}" autocomplete="new-password">
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon">メモ</span>
+        <textarea class="form-control" name="memo" autocomplete="new-password">{{php:\page\system\contents\account\data::getAccount({{session:id}},'memo')}}</textarea>
+      </div>
+
+
+      <div class="login-submit">
+        <button type="submit" class="btn btn-primary">送信</button>
+      </div>
+    </div>
+  </div>
+</form>

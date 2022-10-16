@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="design/system/database/database.css?{{method:\mynt::currenttime()}}">
+<!-- <script src="mynt/system/page/js/database.js?{{method:\mynt::currenttime()}}"></script> -->
+
+<h1>Database</h1>
+
+<form class="database" method="post" name="form_data">
+  <input type="hidden" name="php" value="\mynt\system\database::makeDataArea()">
+  <input type="hidden" name="redirect" value="?p={{request:p}}">
+
+
+  <h2 style="display:inline;">Database-Type : </h2>
+
+  <div class="config-type">
+    {{php:\mynt\system\database::getConfigValue("type")}}
+  </div>
+
+  <hr>
+
+  <table class="tables-view">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Table-Name</th>
+        <th>Table-Exists</th>
+        <th>Index</th>
+        <th>Control</th>
+      </tr>
+    </thead>
+    <tbody>
+{{php:\mynt\system\database::viewTables_tr()}}
+    </tbody>
+  </table>
+
+  <hr>
+
+  <div class="forms">
+    <button type="submit">データ送信</button>
+  </div>
+
+</form>
+

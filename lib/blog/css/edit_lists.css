@@ -1,0 +1,133 @@
+.contents{
+  overflow-x:auto;
+}
+.blog-lists-area{
+  width:100%;
+  min-width:600px;
+  
+}
+.blog-lists-area *{
+  font-size:12px;
+}
+.blog-lists-area h1{
+  font-size:24px;
+}
+
+.status-area ul{
+  display:flex;
+  list-style:none;
+  margin:10px 0 0 0;
+  padding:0 0 0 10px;
+  border-bottom:1px solid #ccc;
+  overflow:auto;
+}
+.status-area li{
+  list-style:none;
+  margin:0 2px;
+  padding:4px 10px;
+  border-color:#aaa;
+  background-color:#eee;
+  border-style:solid;
+  border-width:1px 1px 0 1px;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  cursor:pointer;
+  text-align:center;
+  white-space:nowrap;
+}
+.status-area li.add{
+  width:auto;
+  border-radius:0;
+  /* border:1px solid blue; */
+  border-width:1px;
+  background-color:#ccf;
+  padding:3px 20px 3px;
+  margin-bottom:2px;
+}
+
+.status-area li:hover{
+  background-color:#fee;
+}
+.status-area li[data-active="1"]{
+  background-color:#cfc!important;
+}
+.lists{
+  padding:0!important;
+}
+.lists table{
+  border-collapse:collapse;
+  width:100%;
+  table-layout:fixed;
+}
+.lists table thead{
+  border-bottom:1px solid #ccc;
+}
+.lists table thead tr{
+  height:50px;
+}
+.lists table thead th{
+  background-color:white;
+  font-weight:normal;
+  vertical-align:middle!important;
+}
+.lists table th,
+.lists table td{
+  border:0;
+  vertical-align:middle;
+  text-align:left;
+}
+.lists table .num{
+  text-align:center;
+}
+.lists table .num{
+  width:50px;
+}
+
+.lists table tbody.datas tr{
+  height:50px;
+  cursor:pointer;
+}
+.lists table tbody.datas tr:last-child{
+  border-bottom:1px solid #ccc;
+}
+.lists table tbody.datas tr:nth-of-type(2n+1){
+  background-color:rgba(0,0,0,0.035);
+}
+.lists table tbody.datas tr:hover{
+  background-color:#fee;
+}
+.lists .empty{
+  padding:40px 20px;
+  text-align:center;
+  border-bottom:1px solid #ccc;
+  background-color:rgba(0,0,0,0.05);
+  height:auto!important;
+  line-height:normal;
+}
+
+@media screen and (max-width:499px){
+  .status-area li{
+    font-size:12px;
+  }
+}
+@media screen and (min-width:500px){
+  .status-area li{
+    min-width:60px;
+  }
+}
+
+
+.template{
+  display:none;
+}
+
+
+.head-tools{
+  display:flex;
+  padding:0 10px;
+}
+.head-tools > *{
+  margin:0 4px;
+}
+
+

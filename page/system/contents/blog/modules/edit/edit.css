@@ -1,0 +1,29 @@
+
+@media (max-width: 767px){
+  .page-column-1{
+    display:block;
+  }
+}
+@media (min-width: 768px) {
+  .page-column-1{
+    display:flex;
+  }
+}
+
+.page-column-1 > *{
+  padding:10px;
+}
+
+.tool-buttons > *{
+  display:inline-block;
+}
+textarea{
+  min-height:300px;
+}
+.control-group{
+  margin-bottom:10px;
+}
+.blog-edit button,
+.blog-edit input[type="submit"] {
+  color:black;
+}

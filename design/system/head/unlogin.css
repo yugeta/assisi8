@@ -1,0 +1,132 @@
+html > body{
+	margin:0;
+	height:100%;
+}
+
+
+form[name="login"]{
+	/* text-align:center; */
+  /* border:1px solid black; */
+  width:100%;
+  height:100%;
+  /* min-height:calc(100% - 56px - 60px); */
+  display:block;
+}
+
+.login-logo{
+  text-align:center;
+}
+.login-logo img,
+.login-logo svg{
+  width:150px;
+	/* padding-bottom:40px; */
+	margin-bottom:20px;
+}
+.login-logo svg{
+	fill:#666;
+}
+
+.login{
+	margin:0 auto;
+	padding:0px;
+	/* border-radius:4px; */
+	border:0;
+	display:inline-block;
+  width:100%;
+}
+.login .input-group{
+  margin:0 auto 20px;
+  width:300px;
+}
+.login .input-area{
+	padding:30px 10px;
+	text-align:center;
+}
+
+.input-group-addon{
+	width:100px;
+}
+
+
+.login .inputs{
+	margin:0;
+	padding:12px 8px;
+}
+.login .inputs div{
+	height:40px;
+	line-height:40px;
+}
+.login .inputs .name{
+	display:inline-block;
+	width:40px;
+	text-align:center;
+}
+.login .inputs .input{
+	display:inline-block;
+	width:240px;
+}
+.login .inputs .submit{
+	height:30px;
+	line-height:30px;
+	display:block;
+	padding:0 20px;
+	text-align:right;
+}
+.login .login-submit{
+  margin-top:40px;
+	text-align:center;
+}
+
+.login .login-submit button,
+input[type="submit"]{
+	max-width:300px;
+	width:100%;
+	cursor:pointer;
+  background-color:#888;
+	/* border-color:#f18e01; */
+	color:white;
+}
+.login .login-submit button:hover,
+input[type="submit"]:hover{
+	/* background-color: #CCC; */
+  opacity:0.7;
+}
+
+.user_add{
+	height:20px;
+	margin:20px;
+	text-align:center;
+	line-height:20px;
+}
+
+.error{
+  text-align:center;
+  margin:20px auto 0 auto;
+}
+.error .error-box{
+  display:inline-block;
+  padding:8px 20px;
+  border:2px double red;
+  color:red;
+  font-weight:bold;
+  text-align:left;
+	margin:0;
+}
+
+main.bs-docs-masthead{
+}
+main.bs-docs-masthead form{
+}
+
+input[type="submit"]{
+	background-color:#EEE;
+	border:1px solid #CCC;
+}
+input[type="submit"]:hover{
+	background-color:#DDD;
+	border:1px solid #BBB;
+}
+
+
+
+

@@ -1,0 +1,61 @@
+{{php:\lib\design\modules::load("page_setting","	")}}
+{{php:\lib\design\modules::load("install","	")}}
+
+
+<div class="links">
+  <ul>
+    <li data-type="change" data-active="{{if:'{{get:type}}'==='change' || '{{get:type}}' === ''}}1{{/if}}">切り替え</li>
+    <li data-type="edit" data-active="{{if:'{{get:type}}'==='edit'}}1{{/if}}">編集</li>
+    <li data-type="new" data-active="{{if:'{{get:type}}'==='new'}}1{{/if}}">新規作成</li>
+  </ul>
+</div>
+
+
+<div class="message-error">{{post:message_error}}</div>
+<div class="message-success">{{post:message_success}}</div>
+
+
+
+{{if:"{{get:type}}" === "content"}}
+{{file:page/system/contents/page/template/content.html}}
+
+
+{{elif:"{{get:type}}" === "new"}}
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\lib\page\setting::save_new()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="{{session:auth}}">
+{{file:page/system/contents/page/template/new.html}}
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">新規</button>
+  </div>
+</form>
+
+
+{{elif:"{{get:type}}" === "edit"}}
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\lib\page\setting::save_edit()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="{{session:auth}}">
+{{file:page/system/contents/page/template/edit.html}}
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">更新</button>
+  </div>
+</form>
+
+
+{{else}}
+<form name="form1" method="post">
+  <input type="hidden" name="php" value="\lib\page\setting::save_change()" />
+  <input type="hidden" name="redirect" value="?p={{get:p}}&c={{get:c}}">
+  <input type="hidden" name="auth[auth]" value="{{session:auth}}">
+{{file:page/system/contents/page/template/change.html}}
+  <div class="hr">
+  <div class="post-button">
+    <button type="submit">送信</button>
+  </div>
+</form>
+
+{{/if}}

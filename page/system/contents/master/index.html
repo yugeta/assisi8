@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="page/system/contents/master/lists.css?{{globals:page[version]}}" />
+<script src="page/system/contents/master/master.js?{{globals:page[version]}}"></script>
+
+<link rel="stylesheet" href="page/system/contents/master/modal.css?{{globals:page[version]}}" />
+<script src="plugin/modal_js/src/modal.js?{{globals:page[version]}}"></script>
+<script src="plugin/pagenation/src/pagenation_2.js?{{globals:page[version]}}"></script>
+
+
+
+<!-- <h1>カラーマスター</h1> -->
+<input type="hidden" id="uid"    value="{{session:id}}">
+<input type="hidden" id="page"   value="{{globals:page[page]}}">
+<input type="hidden" id="master" value="{{get:master}}">
+
+<div class="select-master-area">
+  <select name="master">
+    <option value="">*選択してください</option>
+    {{php:\page\system\contents\master\common::get_tables_option("{{session:id}}")}}
+  </select>
+</div>
+
+
+<div class="button-area">
+  <!-- <button class="del">テーブルを削除</button> -->
+  <button class="add">データを追加</button>
+  <button class="csv-import">CSVで取り込み</button>
+  <button class="csv-download">ダウンロード</button>
+</div>
+
+<div class="index-area">
+  <span class="label">Index</span>
+  <span class="input"></span>
+  <!--  : {!{php:\lib\data\data::get_table_index_lists("{{globals:page[page]}}","{{get:master}}")}!} -->
+</div>
+
+<div class="lists">
+  <table>
+    <thead>
+      <tr class="name">
+{{php:\lib\master\db::header("th","{{globals:page[page]}}","{{get:master}}")}}
+      </tr>
+      <tr class="key">
+{{php:\lib\master\db::header("th","{{globals:page[page]}}","{{get:master}}","key")}}
+      </tr>
+    </thead>
+    <tbody class="datas">
+<!-- {!{php:\lib\master\db::lists_html("tr","{{globals:page[page]}}","{{get:master}}")}!} -->
+    </tbody>
+    <tbody class="no-data" style="display:none;">
+      <tr>
+        <td>データがありません。</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="pagenation"></div>

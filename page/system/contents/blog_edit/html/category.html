@@ -1,0 +1,9 @@
+<div class="control-group" id="fileNameArea">
+  <label class="control-label" for="group"><i class='glyphicon glyphicon-menu-hamburger'></i> Category</label>
+  <!-- <div class="controls">
+    <input type="text" name="category" value="{{php:\lib\blog\info::getString('category','{{get:category}}','{{get:id}}')}}">
+  </div> -->
+  <select id="status" name="category" class='form-control'>
+    {{php:\page\system\contents\blog\status::getSetatusListsOptions("{{get:category}}","{{get:id}}")}}
+  </select>
+</div>

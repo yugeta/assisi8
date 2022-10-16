@@ -1,0 +1,109 @@
+
+#datas,
+#datas ul,
+#datas li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#datas > ul{
+  margin:8px;
+}
+#datas > ul > li{
+  border-left:6px solid #bbb;
+  border-bottom:1px solid rgb(230,230,230);
+}
+#datas ul > li{
+  padding:16px;
+}
+
+#datas > ul > li > ul{
+  margin-left:40PX;
+}
+
+#datas > ul > li:hover{
+  background-color:rgb(240,240,240);
+}
+
+#datas > ul > li li:hover{
+  background-color:rgb(255,230,230);
+}
+
+#datas .trash{
+  cursor:pointer;
+}
+#datas .trash:hover{
+  opacity:0.5;
+}
+
+#datas > ul > li[data-active='1']{
+  /* background-color:#fee; */
+  border-left:6px solid red;
+}
+
+#datas li .head{
+  display:flex;
+}
+#datas li .head > *{
+  display:inline-block;
+  margin-left:10px;
+}
+
+#datas > ul > li .file > span{
+  font-size:12px;
+}
+#datas > ul img{
+  width:20px;
+  margin-left:10px;
+}
+#datas > ul > li .file a:hover{
+  opacity:0.5;
+}
+#datas > ul > li .comment pre{
+  overflow:hidden;
+  height:100px;
+  cursor:pointer;
+
+}
+#datas > ul > li .comment pre[data-expand="1"]{
+  height:auto;
+}
+#datas > ul > li .comment img{
+  max-width:90%;
+  max-height:200px;
+}
+
+button[name="data[remove]"]{
+  display:none;
+}
+button[name='data[remove]'][data-view='1']{
+  display:inline-block;
+}
+
+
+.type-area{
+  margin-bottom:15px;
+  text-align:center;
+}
+.type-area > select{
+  min-width:100px;
+}
+.message{
+  display:none;
+}
+.message[data-message-view="1"]{
+  margin:40px auto;
+  display:block;
+  max-width:80%;
+  min-width:300px;
+  /* min-height:120px; */
+  border:1px solid red;
+  border-radius:4px;
+  padding:40px;
+  text-align:center;
+  font-size:16px;
+}
+
+.input{
+  margin-top:40px;
+}

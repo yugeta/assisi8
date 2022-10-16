@@ -1,0 +1,62 @@
+{{php:\lib\auth\session::check_auth("","?p=system&f=login")}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MYNTpage</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="icon" type="image/svg+xml" href="page/system/img/favicon.svg" sizes="96x96">
+{{php:\lib\design\modules::load("common","	")}}
+{{php:\lib\design\modules::load("head","	")}}
+</head>
+
+<body>
+	
+	<div id="menu-area">
+    <div class="menu header-menu">
+      <ul class="logo">
+        <li>
+          <a href="?p=system">
+            <span class="img">
+              <svg src="page/system/img/icon/block.svg"></svg>															
+            </span>
+            <span class="txt">{{globals:page[name]}}</span>
+          </a>
+        </li>
+      </ul>
+      <div class="mobile-list-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="account">
+        {{php:\lib\menu\lists::view_file("header","page/system/data/menu.json")}}
+      </ul>
+    </div>
+    
+    <div class="menu side-menu">
+
+      
+
+      <ul>
+        {{php:\lib\menu\lists::view_file("side","page/system/data/menu.json")}}
+      </ul>
+
+    </div>
+  </div>
+
+	<div class="contents">
+    {{php:lib\html\page::contents("{{request:c}}","{{request:p}}")}}
+  </div>
+
+</body>
+</html>

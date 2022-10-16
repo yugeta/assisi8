@@ -1,0 +1,31 @@
+<script src="plugin/fileupload/src/images.js?{{php:\mynt::currentTime()}}"></script>
+<!-- <script src="plugin/fileupload/src/sound.js?{{php:\mynt::currentTime()}}"></script>
+<script src="plugin/fileupload/src/video.js?{{php:\mynt::currentTime()}}"></script> -->
+<script src="plugin/fileupload/src/fileupload.js?{{php:\mynt::currentTime()}}"></script>
+
+<script src="plugin/modal_js/src/modal.js?{{php:\mynt::currentTime()}}"></script>
+<link rel="stylesheet" href="page/system/contents/media/modules/upload.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/media/modules/upload.js?{{php:\mynt::currentTime()}}"></script>
+
+<input type="hidden" id="page" value="{{globals:page[page]}}">
+
+<div class="media-header">
+  <select class="mode-select">
+    <option>全て表示</option>
+    <option value="image">画像のみ表示</option>
+    <!-- <option value="sound">Sound</option>
+    <option value="sound">Video</option> -->
+    <!-- <option value="file"></option> -->
+  </select>
+  <div class="buttons" style="display:inline-block;">
+    <button class="upload-images">画像アップロード</button>
+    <!-- <button class="upload-sounds">ファイルアップロード</button>
+    <button class="upload-videos">ファイルアップロード</button> -->
+    <button class="upload-files">ファイルアップロード</button>
+  </div>
+</div>
+<div class="files" data-loading="1"></div>
+
+<script>
+new $$upload();
+</script>

@@ -1,0 +1,69 @@
+{
+  "info" : {
+    "name" : "BLOG",
+    "type" : "overwrite"
+  },
+  "columns" : {
+    
+
+    "id" : {
+      "name"   : "ID",
+      "type"   : "INT",
+      "length" : 11,
+      "option" : "UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+    },
+
+    "category" : {
+      "name"   : "カテゴリー",
+      "type"   : "VARCHAR",
+      "length" : 20,
+      "option" : "",
+      "index"  : "cate",
+      "default" : "1"
+    },
+
+    "uid" : {
+      "name"   : "投稿者ID",
+      "type"   : "VARCHAR",
+      "length" : 20
+    },
+
+    "tag" : {
+      "name"   : "タグ",
+      "type"   : "VARCHAR",
+      "length" : 200
+    },
+    "file" : {
+      "name"   : "sourceファイル名",
+      "type"   : "VARCHAR",
+      "length" : 100
+    },
+    "status" : {
+      "name"   : "ステータス",
+      "type"   : "VARCHAR",
+      "length" : 20
+    },
+    "title" : {
+      "name"   : "タイトル",   
+      "type"   : "VARCHAR",
+      "length" : 200
+    },
+    "image" : {
+      "name"   : "アイキャッチ画像",
+      "type"   : "VARCHAR",
+      "length" : 100
+    },
+    
+    
+    "date" : {
+      "name"   : "公開日",
+      "type"   : "VARCHAR",
+      "length" : 14
+    },
+    "entry" : {
+      "name"   : "登録日",
+      "type"   : "VARCHAR",
+      "length" : 14
+    }
+  }
+}

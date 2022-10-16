@@ -1,0 +1,84 @@
+<script src="page/system/vendor/jquery/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="page/system/vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="page/system/vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+<script src="page/system/vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<!-- <link rel="stylesheet" href="page/system/contents/blog_edit/modules/load.css?{{php:\mynt::currentTime()}}"> -->
+<link rel="stylesheet" href="page/system/contents/blog_edit/modules/edit.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/blog_edit/modules/edit.js?{{php:\mynt::currentTime()}}"></script>
+<script src="page/system/contents/blog_edit/modules/tempSave.js?{{php:\mynt::currentTime()}}"></script>
+
+<!-- Upload pickup-image -->
+<script src="plugin/fileupload/src/images.js?{{php:\mynt::currentTime()}}"></script>
+<script src="plugin/modal_js/src/modal.js?{{php:\mynt::currentTime()}}"></script>
+<link rel="stylesheet" href="page/system/contents/media/modules/upload.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/media/modules/upload.js?{{php:\mynt::currentTime()}}"></script>
+
+
+
+<div class='--container'>
+	<div class='--row'>
+		<div class='col-sm-12'>
+			<p style="font-size:20px;margin:0;"><a class="back" href='?p={{get:p}}&c=blog/index&category={{get:category}}&status={{get:status}}'><i class='glyphicon glyphicon-arrow-left'></i> Blog Lists</a></p>
+		</div>
+	</div>
+
+	<!-- <div class='--row'>
+		<div class='col-sm-12'>
+			<div class='base-default base-color-green'>
+				<h1><i class='glyphicon glyphicon-edit'></i> Blog Edit</h1>
+			</div>
+		</div>
+	</div> -->
+</div>
+
+<form name='form1' method='post' class="form-horizontal">
+	<input type='hidden' name='php' value='\page\system\contents\blog_edit\data::post()' />
+	<input type='hidden' name='redirect' value='{{php:\lib\url\common::getUrl()}}?p={{get:p}}&c=blog/index&category={{get:category}}&status={{get:status}}' />
+	<input type="hidden" name="id" value="{{get:id}}">
+	<input type="hidden" name="category" value="{{get:category}}">
+	<!-- <input type="hidden" name="uid" value="{{session:id}}"> -->
+	<input type="hidden" name="file" value="{{php:\lib\blog\info::getString('file','{{get:category}}','{{get:id}}')}}">
+	<!-- <input type="hidden" name="entry" value="{{php:\page\system\contents\blog\edit::getPageInfoString('entry','{{get:category}}','{{get:id}}')}}"> -->
+	<!-- <input type='hidden' name='method' value='\MYNT\SYSTEM\BLOG_EDIT::setSystemPage' />
+	<input type="hidden" name="p" value="<<REQUEST:p>>">
+	<input type="hidden" name="file" value="<<REQUEST:file>>">
+	<input type="hidden" name="mode" value="">
+	<input type="hidden" name="regist" value="<<METHOD:\MYNT\SYSTEM\BLOG_EDIT::getPageInfoString("<<request:file>>","regist")>>"> -->
+
+	<div class='--container'>
+		<div class='--row'>
+
+			<div class='col-sm-8'>
+				<div class='base-default base-color-gray'>
+					{{file:page/system/contents/blog_edit/html/title.html}}
+					{{file:page/system/contents/blog_edit/html/addTags.html}}
+					{{file:page/system/contents/blog_edit/html/source.html}}
+					{{file:page/system/contents/blog_edit/html/buttons.html}}
+				</div>
+			</div>
+
+			<div class='col-sm-4'>
+				<div class='base-default base-color-gray'>
+					{{file:page/system/contents/blog_edit/html/eyecatch.html}}
+					{{file:page/system/contents/blog_edit/html/status.html}}
+					{{file:page/system/contents/blog_edit/html/schedule.html}}
+					<!-- {!{file:page/system/contents/blog_edit/html/category.html}!} -->
+					{{file:page/system/contents/blog_edit/html/tag.html}}
+					{{file:page/system/contents/blog_edit/html/users.html}}
+					{{file:page/system/contents/blog_edit/html/info.html}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<div id="addtag_code">
+	<p>ソースコード挿入</p>
+	<textarea class="form-control"></textarea>
+	<button class="btn btn-default btn-close" type="button">閉じる</button>
+	<button class="btn btn-default btn-insert" type="button">挿入</button>
+</div>
+
+

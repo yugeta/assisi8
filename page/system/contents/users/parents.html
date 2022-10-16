@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="page/system/contents/users/users.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/users/users.js?{{php:\mynt::currentTime()}}"></script>
+
+<h1>階層情報</h1>
+
+<form method="POST" class="form-horizontal">
+  <!-- <input type='hidden' name='method' value='\MYNT\SYSTEM\CONFIG::setMenuEdit' /> -->
+  <input type='hidden' name='php' value='\page\system\php\user' />
+	<input type="hidden" name="p" value="{{request:p}}" />
+  <input type="hidden" name="file" value="data/user/login.json" />
+
+<div class='lists'>
+  <table class="table table-striped userLists">
+    <thead>
+      <tr>
+        <th class="num">#</th>
+        <!-- <th>ID</th> -->
+        <th class="mail">メール</th>
+        <th class="auth">権限</th>
+        <th class="name">名前</th>
+        <th class="memo">メモ</th>
+        <!-- <th>登録日</th> -->
+      </tr>
+    </thead>
+    <tbody>
+{{php:\page\system\contents\users\users::getLists_tr()}}
+    </tbody>
+  </table>
+</div>
+
+<div class='container'>
+  <div class="row">
+    <button type='button' class='btn btn-default addAccount' />Add account</button>
+  </div>
+</div>
+
+</form>
+
+<style>
+textarea.menuEdit{
+  min-height:400px;
+}
+</style>

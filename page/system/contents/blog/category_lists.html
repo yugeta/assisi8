@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="page/system/contents/blog/modules/category/lists.css?{{php:\mynt::currentTime()}}">
+<script src="page/system/contents/blog/modules/category/lists.js?{{php:\mynt::currentTime()}}"></script>
+
+<h1>category</h1>
+
+<div class="lists">
+  <table>
+    <thead>
+      <tr>
+        <th class="num">#</th>
+        <th class="mail">Name</th>
+        <th class="auth">Users</th>
+        <th class="memo">Memo</th>
+      </tr>
+    </thead>
+    <tbody>
+{{php:\page\system\contents\blog\category::getLists_tr()}}
+    </tbody>
+  </table>
+</div>
+
+<div class='add-area'>
+  <button type='button' class='add' />Add account</button>
+</div>

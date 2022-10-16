@@ -1,0 +1,9 @@
+<div class="control-group">
+  <label class="control-label" for="status"><i class='glyphicon glyphicon-sort-by-attributes'></i> Status</label>
+  <div class="controls">
+    <select id="status" name="status" class='form-control'/>
+      <!-- <option value=""></option> -->
+      {{METHOD:\MYNT\SYSTEM\BLOG_EDIT::getSetatusListsOptions("{{get:file}}")}}
+    </select>
+  </div>
+</div>

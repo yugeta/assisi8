@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+:root{
+  --size-column-right:300px;
+  --size-eyecatch-height-1:200px;
+  --size-eyecatch-height-2:300px;
+  --size-eyecatch-height-3:400px;
+
+  --color-main-bg:white;
+  --color-point:#80BF41;
+  --color-border-color:#ccc;
+}
+
+.blog *{
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.blog img{
+  max-width:100%;
+}
+
+.blog{
+  margin:0 auto;
+}
+
+
+h1{
+  font-size:30px;
+  color:black;
+  line-height:150%;
+  margin-bottom:10px;
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+}
+
+article .center{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+article{
+  white-space:pre-wrap;
+  word-break:break-all;
+  font-size:16px;
+  line-height:32px;
+  margin-top:20px;
+  background-color:var(--color-main-bg);
+}
+article *{
+  white-space:pre-wrap;
+  word-break:break-all;
+  font-size:16px;
+  line-height:var(--size-textarea-line);
+}
+article h2{
+  font-size:26px;
+}
+article h3{
+  font-size:20px;
+}
+article h4{
+  font-size:16px;
+}
+article h5{
+  font-size:12px;
+}
+article h6{
+  font-size:10px;
+}
+article ol,
+article ul,
+article table,
+article tr,
+article tbody,
+article thead,
+article tfoot{
+  white-space:normal;
+  margin:0;
+}
+
+article table{
+  border-collapse:collapse;
+  min-width:50%;
+  table-layout: fixed;
+}
+article table th{
+  background-color:var(--color-point);
+  color:white;
+}
+article table th,
+article table td{
+  border:1px solid var(--color-border-color);
+  padding:5px;
+  line-height:24px;
+  white-space:pre-wrap;
+}
+
+.blog-header{
+  /* display:flex; */
+  color:#888;
+  margin-bottom:10px;
+  text-align:right;
+}
+.blog-header > *{
+  color:black;
+  /* padding:0px 10px; */
+  /* font-weight:bold; */
+}
+.blog-header > *:empty{
+  display:none;
+}
+.blog-header,
+.blog-header *{
+  font-size:14px;
+}
+
+.eyecatch img{
+  width:100%;
+  object-fit:cover;
+  /* margin:10px 0; */
+}
+
+.blog-tags{
+  display:block;
+  margin-bottom:10px;
+}
+.blog-tags .tag{
+  display:inline-block;
+  padding:5px 10px;
+  max-width:100%;
+  white-space:pre-wrap;
+  word-break:break-all;
+  margin:4px;
+  background-color:#88c;
+  color:white;
+  font-size:14px;
+  border-radius:4px;
+  font-weight:normal;
+}
+
+.column-right > *{
+  width:100%;
+  min-height:100px;
+  /* margin-bottom:20px; */
+}
+.gadget{
+  /* box-shadow:2px 2px 8px rgba(0,0,0,0.3); */
+  padding:0;
+  /* border-top:4px solid #AAD; */
+  border-top:0;
+  border-right:1px solid var(--color-border-color);
+  border-left:1px solid var(--color-border-color);
+  border-bottom:1px solid var(--color-border-color);
+  background-color:white;
+}
+.gadget .label{
+  background-color:#AAD;
+  padding:4px 10px;
+  color:white;
+}
+.gadget .content{
+  padding:10px;
+}
+
+@media screen and (max-width:499px){
+  .blog{
+    display:block;
+    padding:20px 10px;
+  }
+  .eyecatch img{
+    height:var(--size-eyecatch-height-1);
+  }
+  .column-left{
+    margin-bottom:40px;
+  }
+  .column-right{
+    display:block;
+  }
+  .column-right > *{
+    margin-bottom:10px;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:799px){
+  .blog{
+    display:block;
+    padding:20px 10px;
+  }
+  .eyecatch img{
+    height:var(--size-eyecatch-height-2);
+  }
+  .column-left{
+    margin-bottom:40px;
+  }
+  .column-right{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap: 10px;
+  }
+}
+@media screen and (min-width:800px){
+  .blog{
+    display:flex;
+    padding:40px 20px;
+    max-width:1000px;
+  }
+  .column-left{
+    width : calc(100% - var(--size-column-right));
+  }
+  .column-right{
+    width:var(--size-column-right);
+    padding-left:10px;
+  }
+  .column-right > *{
+    margin-bottom:10px;
+  }
+
+  
+  .eyecatch img{
+    max-height:var(--size-eyecatch-height-3);
+  }
+}
+/* @media screen and (min-width:900px){
+  .blog{
+    display:flex;
+    padding:40px 20px;
+    max-width:1100px;
+  }
+} */
+
+code{
+  width:100%;
+}
+
+
+blockquote{
+  /* border:1px dotted var(--color-border-color); */
+  border-color:var(--color-border-color);
+  border-width:2px;
+  /* border-style:attr(line-style,"dotted"); */
+  border-style:dashed;
+  padding:10px;
+  margin:0;
+}
+/* blockquote[data-line-style]{
+  border:1px attr(data-line-style,"dotted") #ccc;
+} */
+
+

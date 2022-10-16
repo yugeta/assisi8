@@ -1,0 +1,10 @@
+<div class="control-group">
+  <label class="control-label" for="source"><i class='glyphicon glyphicon-info-sign'></i> Infomation</label>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <i class='glyphicon glyphicon-open-file'></i> File   : {{if:"{{get:file}}"}} {{METHOD:\MYNT\SYSTEM\BLOG_EDIT::getType2Dir()}}{{get:file}}.html{{/if}}<br>
+      <i class='glyphicon glyphicon-glass'></i> Regist : {{METHOD:\MYNT\SYSTEM\BLOG_EDIT::getPageInfoString_datetime("{{get:file}}","regist")}}<br>
+      <i class='glyphicon glyphicon-time'></i> Update : {{METHOD:\MYNT\SYSTEM\BLOG_EDIT::getPageInfoString_datetime("{{get:file}}","update")}}<br>
+    </div>
+  </div>
+</div>

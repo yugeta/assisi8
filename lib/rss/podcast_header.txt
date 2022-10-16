@@ -1,0 +1,36 @@
+    <title>{{title}}</title>
+    <link>{{url}}</link>
+    <description>{{description}}</description>
+    {{categories_itunes}}
+    <itunes:type>{{type}}</itunes:type>
+    <copyright>{{copyright}}</copyright>
+    <pubDate>{{header_date}}</pubDate>
+    <language>ja</language>
+    <ttl>60</ttl>
+    <docs>{{docs}}</docs>
+    <itunes:author>{{author}}</itunes:author>
+    <itunes:title>{{title}}</itunes:title>
+    <itunes:subtitle>{{description}}</itunes:subtitle>
+    <itunes:image href="{{banner}}"/>
+    <itunes:owner>
+      <itunes:email>{{email}}</itunes:email>
+      <itunes:name>{{author}}</itunes:name>
+    </itunes:owner>
+    <itunes:summary>{{description}}</itunes:summary>
+    <itunes:keywords>{{keywords}}</itunes:keywords>
+    <itunes:explicit>{{explicit}}</itunes:explicit>
+    <image>
+      <url>{{banner}}</url>
+      <title>{{title}}</title>
+      <link>{{url}}</link>
+    </image>
+
+    <googleplay:author>{{author}}</googleplay:author>
+    <googleplay:image href="{{banner}}"/>
+    <googleplay:owner>
+      <googleplay:email>{{email}}</googleplay:email>
+      <googleplay:name>{{author}}</googleplay:name>
+    </googleplay:owner>
+    <googleplay:summary>{{description}}</googleplay:summary>
+    {{categories_googleplay}}
+    <googleplay:explicit>No</googleplay:explicit>
